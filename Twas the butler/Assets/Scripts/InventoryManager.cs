@@ -7,6 +7,8 @@ public class InventoryManager : MonoBehaviour
     public Slot[] inventorySlots;
     public GameObject slotPrefab;
 
+    public ClueData testClue;
+
     private void Awake()
     {
         if (Instance == null)
@@ -38,8 +40,7 @@ public class InventoryManager : MonoBehaviour
     [Button]
     private void TestAddClue()
     {
-        ClueData testClue = new ClueData();
-        testClue.clueName = "Test Clue";
+        
         AddClueToInventory(testClue);
     }
 

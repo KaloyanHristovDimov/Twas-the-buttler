@@ -531,6 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySlots: []
   slotPrefab: {fileID: 0}
+  testClue: {fileID: 11400000, guid: eb35020f926d52c4b9b67b50c7376be4, type: 2}
 --- !u!114 &643672313
 MonoBehaviour:
   m_ObjectHideFlags: 0

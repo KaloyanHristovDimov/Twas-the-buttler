@@ -5,5 +5,6 @@ public class ClueData : ScriptableObject
 {
     public string clueName;
     public enum ClueType { Note, Object, Location, Person }
+    public ClueType clueType;
     public Sprite clueSprite;
 }
