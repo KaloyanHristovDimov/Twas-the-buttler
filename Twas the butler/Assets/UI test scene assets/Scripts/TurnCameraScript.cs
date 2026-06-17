@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurnCameraScript : MonoBehaviour
 {
 
-    [SerializeField] private Camera camera;
+    [SerializeField] private GameObject rotatingObject;
     // Source - https://stackoverflow.com/a/37588536
     // Posted by Programmer, modified by community. See post 'Timeline' for change history
     // Retrieved 2026-06-16, License - CC BY-SA 3.0
@@ -31,15 +31,15 @@ public class TurnCameraScript : MonoBehaviour
         }
         rotating = true;
 
-        Vector3 newRot = gameObjectToMove.transform.eulerAngles + eulerAngles;
+        Vector3 newRot = gameObjectToMove.transform.localEulerAngles + eulerAngles;
 
-        Vector3 currentRot = gameObjectToMove.transform.eulerAngles;
+        Vector3 currentRot = gameObjectToMove.transform.localEulerAngles;
 
         float counter = 0;
         while (counter < duration)
         {
             counter += Time.deltaTime;
-            gameObjectToMove.transform.eulerAngles = Vector3.Lerp(currentRot, newRot, counter / duration);
+            gameObjectToMove.transform.localEulerAngles = Vector3.Lerp(currentRot, newRot, counter / duration);
             yield return null;
         }
         rotating = false;
@@ -50,11 +50,11 @@ public class TurnCameraScript : MonoBehaviour
     
     public void turnLeft()
     {
-        StartCoroutine(rotateObject(camera.gameObject, new Vector3(0, -90, 0), turnDuration));
+        StartCoroutine(rotateObject(rotatingObject, new Vector3(0, -90, 0), turnDuration));
     }
     public void turnRight()
     {
-        StartCoroutine(rotateObject(camera.gameObject, new Vector3(0, 90, 0), turnDuration));
+        StartCoroutine(rotateObject(rotatingObject, new Vector3(0, 90, 0), turnDuration));
     }
     
     
