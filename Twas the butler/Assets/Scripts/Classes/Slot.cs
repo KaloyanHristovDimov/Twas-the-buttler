@@ -13,8 +13,6 @@ public class Slot : MonoBehaviour
     private void Awake()
     {
         slotImage = GetComponent<Image>();
-        ClearClueData();
-
     }
 
     public void SetClueData(ClueData data)
@@ -41,7 +39,7 @@ public class Slot : MonoBehaviour
         }
         else
         {
-            slotImage.sprite = null;
+            Destroy(gameObject);
         }
     }
 

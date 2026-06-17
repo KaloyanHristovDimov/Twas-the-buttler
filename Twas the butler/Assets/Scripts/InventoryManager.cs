@@ -1,9 +1,11 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     public Slot[] inventorySlots;
+    public GameObject slotPrefab;
 
     private void Awake()
     {
@@ -16,22 +18,29 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
         inventorySlots = GetComponentsInChildren<Slot>();
+        slotPrefab = inventorySlots[0].gameObject;
     }
 
     public void AddClueToInventory(ClueData clueData)
     {
-            foreach (Slot slot in inventorySlots)
+        foreach (Slot slot in inventorySlots)
+        {
+            if (!slot.HasClueData())
             {
-                if (!slot.HasClueData())
-                {
-                    slot.SetClueData(clueData);
-                    slot.UpdateSlot();
-                    return;
-                }
+                slot.SetClueData(clueData);
+                slot.UpdateSlot();
+                return;
             }
-            Slot firstSlot = inventorySlots[0];
-            Instantiate(firstSlot, firstSlot.transform.parent).GetComponent<Slot>().SetClueData(clueData);
+        }
+        Instantiate(slotPrefab, slotPrefab.transform.parent).GetComponent<Slot>().SetClueData(clueData);
     }
 
-    
+    [Button]
+    private void TestAddClue()
+    {
+        ClueData testClue = new ClueData();
+        testClue.clueName = "Test Clue";
+        AddClueToInventory(testClue);
+    }
+
 }
