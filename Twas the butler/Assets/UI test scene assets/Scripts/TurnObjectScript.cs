@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnCameraScript : MonoBehaviour
+public class TurnObjectScript : MonoBehaviour
 {
 
     [SerializeField] private GameObject rotatingObject;
