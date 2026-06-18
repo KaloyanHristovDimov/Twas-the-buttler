@@ -21,6 +21,15 @@ public class ZoomInScript : MonoBehaviour
         ToggleListOfObjectsToToggleActivity();
         zoomedIn = true;
     }
+    
+    public void ZoomOutCamera()
+    {
+        if (!zoomedIn)
+        {return;}
+        ChangeToMainParent();
+        ToggleListOfObjectsToToggleActivity();
+        zoomedIn = false;
+    }
 
     private void ToggleListOfObjectsToToggleActivity()
     {
