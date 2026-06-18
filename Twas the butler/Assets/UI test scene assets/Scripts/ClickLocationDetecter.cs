@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class ClickLocationDetector : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class ClickLocationDetector : MonoBehaviour
     
     void Update() { 
         // Get the mouse click position in world space 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.isPressed)
         {
             Debug.Log(Mouse.current.position.ReadValue()); 
             Ray mouseRay = Camera.main.ScreenPointToRay( Mouse.current.position.ReadValue() ); 
