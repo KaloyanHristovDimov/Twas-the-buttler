@@ -8,27 +8,29 @@ public class ZoomInScript : MonoBehaviour
     
     [SerializeField] private GameObject mainParentOfObjectYouZoomInOn;
     [SerializeField] private GameObject tempParentOfObjectYouZoomInOn;
-
+    [SerializeField] private InUseBool tempParentOfObjectYouZoomInOnInUseBoolScript;
+    
     [SerializeField] private List<GameObject> listOfObjectsToToggleActivity;
     
-    [SerializeField] private bool zoomedIn = false;
+    
+    
 
     public void ZoomInCamera()
     {
-        if (zoomedIn)
+        if (tempParentOfObjectYouZoomInOnInUseBoolScript.inUse)
         {return;}
         ChangeToTempParent();
         ToggleListOfObjectsToToggleActivity();
-        zoomedIn = true;
+        tempParentOfObjectYouZoomInOnInUseBoolScript.SetInUse();
     }
     
     public void ZoomOutCamera()
     {
-        if (!zoomedIn)
+        if (!tempParentOfObjectYouZoomInOnInUseBoolScript.inUse)
         {return;}
         ChangeToMainParent();
         ToggleListOfObjectsToToggleActivity();
-        zoomedIn = false;
+        tempParentOfObjectYouZoomInOnInUseBoolScript.SetOutOfUse();
     }
 
     private void ToggleListOfObjectsToToggleActivity()
