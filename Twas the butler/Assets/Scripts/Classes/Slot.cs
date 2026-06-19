@@ -99,6 +99,20 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         {
             Destroy(dragVisual);
         }
+
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            Board board = hit.collider.GetComponent<Board>();
+
+            if (board != null)
+            {
+                board.PlaceNote(clueData, hit.point);
+
+                ClearClueData();
+            }
+        }
     }
 
 
