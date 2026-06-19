@@ -21,6 +21,7 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public void SetClueData(ClueData data)
     {
         clueData = data;
+        UpdateSlot();
     }
 
     public void ClearClueData()
@@ -42,6 +43,10 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         }
         else
         {
+            if (dragVisual != null)
+            {
+                Destroy(dragVisual);
+            }
             Destroy(gameObject);
         }
     }
@@ -95,4 +100,6 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             Destroy(dragVisual);
         }
     }
+
+
 }

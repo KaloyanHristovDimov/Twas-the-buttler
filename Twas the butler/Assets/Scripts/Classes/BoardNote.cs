@@ -9,6 +9,7 @@ public class BoardNote : MonoBehaviour
     public void SetClueData(ClueData data)
     {
         clueData = data;
+        image = GetComponent<Image>();
         UpdateNote();
     }
 
