@@ -3,13 +3,13 @@ using UnityEngine.UI;
 
 public class BoardNote : MonoBehaviour
 {
-    public Image image;
+    public SpriteRenderer noteSpriteRenderer;
     public ClueData clueData;
 
     public void SetClueData(ClueData data)
     {
         clueData = data;
-        image = GetComponent<Image>();
+        noteSpriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
         UpdateNote();
     }
 
@@ -17,7 +17,7 @@ public class BoardNote : MonoBehaviour
     {
         if (clueData != null)
         {
-            image.sprite = clueData.clueSprite;
+            noteSpriteRenderer.sprite = clueData.clueSprite;
         }
         else
         {
