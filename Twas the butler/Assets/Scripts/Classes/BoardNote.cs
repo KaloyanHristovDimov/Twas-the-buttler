@@ -56,6 +56,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
                 redString.SetClueData(clueData, targetNote.clueData);
                 redString.SetStartAndEndPoints(this.gameObject, targetNote.gameObject);
+                StringManager.Instance.AddRedString(redString);
             }
         }
     }

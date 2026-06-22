@@ -13,8 +13,7 @@ public class RedString : MonoBehaviour
     }
     public StringTag stringTag = StringTag.None;
 
-    private GameObject pinA;
-    private GameObject pinB;
+    public HashSet<GameObject> connectedObjects = new HashSet<GameObject>();
 
 
     public void SetClueData(ClueData clueDataA, ClueData clueDataB)
@@ -47,10 +46,10 @@ public class RedString : MonoBehaviour
     public void SetStartAndEndPoints(GameObject start, GameObject end)
     {
         // Set the start and end points of the string
-        pinA = start.GetComponentsInChildren<Transform>()[1].gameObject; // Assuming the first child is the pin
-        pinB = end.GetComponentsInChildren<Transform>()[1].gameObject; // Assuming the first child is the pin
+        connectedObjects.Add(start.GetComponentInChildren<Transform>().gameObject);
+        connectedObjects.Add(end.GetComponentInChildren<Transform>().gameObject);
         // Stretch the string between the two points
-        transform.position = (pinA.transform.position + pinB.transform.position) / 2;
+        transform.position = (start.transform.position + end.transform.position) / 2;
         
 
     }
