@@ -118,7 +118,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8960814238144336122}
   - component: {fileID: 3726957099766061988}
-  - component: {fileID: 5375222954540179399}
   m_Layer: 0
   m_Name: Picture
   m_TagString: Untagged
@@ -196,27 +195,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &5375222954540179399
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4055848190613479354}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.2, z: 0.03726019}
-  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &5179876124043645974
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8047037689689030454}
   - component: {fileID: 7010000967236108963}
+  - component: {fileID: 5053614824151901422}
   m_Layer: 0
   m_Name: Note
   m_TagString: Untagged
@@ -265,3 +244,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteSpriteRenderer: {fileID: 0}
   clueData: {fileID: 0}
+  stringDragVisualPrefab: {fileID: 0}
+  StringPrefab: {fileID: 7352383312788608241, guid: 0cdf53c1a055d344ab30db989c3cbb00, type: 3}
+--- !u!65 &5053614824151901422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179876124043645974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.69502234, y: 0.6509272, z: 0.17452413}
+  m_Center: {x: 0.00620836, y: 0.21114105, z: 0.021912381}
