@@ -10,12 +10,23 @@ public class ToggleActiveandUnactive : MonoBehaviour
     [SerializeField] private List<GameObject> gameObjectsToRemoveFromList;
     
     [SerializeField] private ToggleActiveandUnactive scriptWhoseListWillChange;
+
+    [SerializeField] public List<GameObject> gameObjectsToRemoveFromRemoveList;
     
     public void ToggleActive()
     {
         foreach (GameObject gameObject in gameObjectsToToggle)
         {
             gameObject.SetActive(!gameObject.activeSelf);
+        }
+    }
+
+    public void AddToRemoveList()
+    {
+        foreach (GameObject gameObject in gameObjectsToRemoveFromRemoveList)
+        {
+            scriptWhoseListWillChange.gameObjectsToRemoveFromList.Add(gameObject);
+
         }
     }
 
