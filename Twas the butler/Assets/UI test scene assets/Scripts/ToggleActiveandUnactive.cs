@@ -3,13 +3,38 @@ using UnityEngine;
 
 public class ToggleActiveandUnactive : MonoBehaviour
 {
-    [SerializeField] List<GameObject> gameObjectsToToggle;
-
+    public List<GameObject> gameObjectsToToggle;
+    
+    [SerializeField] private List<GameObject> gameObjectsToAddToList;
+    
+    [SerializeField] private List<GameObject> gameObjectsToRemoveFromList;
+    
+    [SerializeField] private ToggleActiveandUnactive scriptWhoseListWillChange;
+    
     public void ToggleActive()
     {
         foreach (GameObject gameObject in gameObjectsToToggle)
         {
             gameObject.SetActive(!gameObject.activeSelf);
+        }
+    }
+
+    public void AddToList()
+    {
+        foreach (var gameObject in gameObjectsToAddToList)
+        {
+            scriptWhoseListWillChange.gameObjectsToToggle.Add(gameObject);
+        }
+    }
+
+    public void RemoveFromList()
+    {
+        foreach (var gameObject in gameObjectsToRemoveFromList)
+        {
+            if (gameObjectsToToggle.Contains(gameObject))
+            {
+                scriptWhoseListWillChange.gameObjectsToToggle.Remove(gameObject);
+            }
         }
     }
 }
