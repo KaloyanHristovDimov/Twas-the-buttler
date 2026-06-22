@@ -31,15 +31,64 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // Handle begin drag event
-        // Create drag visual
-        Debug.Log("Begin dragging note: " + clueData.clueName);
+        switch(ToolManager.Instance.currentTool)
+        {
+            case ToolManager.ToolType.ClueMovingTool:
+                // Handle clue moving logic here
+                Debug.Log("Started dragging note: " + clueData.clueName);
+                break;
+            case ToolManager.ToolType.RedStringTool:
+                // Handle red string dragging logic here
+                Debug.Log("Started dragging note for red string: " + clueData.clueName);
+                break;
+            default:
+                Debug.Log("Started dragging note with no tool: " + clueData.clueName);
+                break;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         // Handle end drag event
         // Destroy drag visual
+        switch(ToolManager.Instance.currentTool)
+        {
+            case ToolManager.ToolType.ClueMovingTool:
+                // Handle clue moving logic here
+                Debug.Log("Dropped note: " + clueData.clueName);
+                break;
+            case ToolManager.ToolType.RedStringTool:
+                HandleRedStringConnection(eventData);
+                break;
+            default:
+                Debug.Log("No tool selected, dropping note: " + clueData.clueName);
+                break;
+        }
+        
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        switch(ToolManager.Instance.currentTool)
+        {
+            case ToolManager.ToolType.ClueMovingTool:
+                // Handle clue moving logic here
+                Debug.Log("Dragging note: " + clueData.clueName);
+                break;
+            case ToolManager.ToolType.RedStringTool:
+                // Handle red string dragging logic here
+                Debug.Log("Dragging note for red string: " + clueData.clueName);
+                break;
+            default:
+                Debug.Log("Dragging note with no tool: " + clueData.clueName);
+                break;
+        }
+
+
+    }
+
+    private void HandleRedStringConnection(PointerEventData eventData)
+    {
         Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
@@ -59,13 +108,5 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 StringManager.Instance.AddRedString(redString);
             }
         }
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        // Handle drag event
-        // Update drag visual position
-
-        
     }
 }
