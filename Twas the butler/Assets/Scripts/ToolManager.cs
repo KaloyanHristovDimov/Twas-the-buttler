@@ -6,7 +6,9 @@ public class ToolManager : MonoBehaviour
     {
         None,
         ClueMovingTool,
-        RedStringTool
+        RedStringTool,
+        StringTagTool,
+        StringDeleteTool
     }
     public static ToolManager Instance { get; private set; }
 
@@ -34,6 +36,12 @@ public class ToolManager : MonoBehaviour
                 break;
             case ToolType. RedStringTool:
                 currentTool = ToolType.RedStringTool;
+                break;
+            case ToolType.StringTagTool:
+                currentTool = ToolType.StringTagTool;
+                break;
+            case ToolType.StringDeleteTool:
+                currentTool = ToolType.StringDeleteTool;
                 break;
             default:
                 currentTool = ToolType.None;
