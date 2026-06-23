@@ -12410,13 +12410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caf2498b5dc8484e8afa7bbe8e51b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationAxis: {x: 0, y: 1, z: 0}
-  degreesPerPixel: 0.15
-  maxFlickDegrees: 120
-  speedForMaxFlick: 2000
-  followSpeed: 12
-  minSwipePixels: 25
-  maxSampleTime: 0.25
 --- !u!1 &1727130200
 GameObject:
   m_ObjectHideFlags: 0
@@ -15958,6 +15951,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2987660991745757478, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 597e8f2f1ef9b2845a414df025fbbacc, type: 2}
+    - target: {fileID: 4239307401727368925, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ed04103fc5b4ba41930656c3f868fb0, type: 2}
     - target: {fileID: 4264570232497774304, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
