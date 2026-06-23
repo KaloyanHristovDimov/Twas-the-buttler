@@ -3,6 +3,7 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
@@ -59,5 +60,6 @@ public class ClickLocationDetector : MonoBehaviour
             OnClick.Invoke(clickPosition);
         }
     }
+
 
 }

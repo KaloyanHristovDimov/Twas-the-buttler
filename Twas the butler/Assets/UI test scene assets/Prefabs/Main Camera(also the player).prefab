@@ -831,6 +831,7 @@ MonoBehaviour:
   gameObjectsToAddToList: []
   gameObjectsToRemoveFromList: []
   scriptWhoseListWillChange: {fileID: 0}
+  gameObjectsToRemoveFromRemoveList: []
 --- !u!1 &1279608580380154055
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,13 +856,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279608580380154055}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5619267259289077807}
-  m_Father: {fileID: 6890317320019207914}
+  m_Father: {fileID: 2959434996616991998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546739763719162080
 GameObject:
@@ -1421,6 +1422,7 @@ Transform:
   - {fileID: 1739377529745149423}
   - {fileID: 6797777325214807393}
   - {fileID: 6890317320019207914}
+  - {fileID: 3500374728171625638}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!20 &7057866653772837205
@@ -2934,6 +2936,7 @@ MonoBehaviour:
   gameObjectsToAddToList: []
   gameObjectsToRemoveFromList: []
   scriptWhoseListWillChange: {fileID: 0}
+  gameObjectsToRemoveFromRemoveList: []
 --- !u!1 &5149213556914480680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,6 +3444,7 @@ MonoBehaviour:
   gameObjectsToAddToList: []
   gameObjectsToRemoveFromList: []
   scriptWhoseListWillChange: {fileID: 0}
+  gameObjectsToRemoveFromRemoveList: []
 --- !u!1 &5977524211714418539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,7 +3820,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8248848171456321225}
-  - {fileID: 3500374728171625638}
   - {fileID: 304581457113866560}
   - {fileID: 3339653619329683082}
   m_Father: {fileID: 2959434996616991998}
@@ -3973,6 +3976,7 @@ MonoBehaviour:
   gameObjectsToAddToList: []
   gameObjectsToRemoveFromList: []
   scriptWhoseListWillChange: {fileID: 0}
+  gameObjectsToRemoveFromRemoveList: []
 --- !u!1 &6502817180272673243
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,6 +5270,7 @@ MonoBehaviour:
   gameObjectsToAddToList: []
   gameObjectsToRemoveFromList: []
   scriptWhoseListWillChange: {fileID: 0}
+  gameObjectsToRemoveFromRemoveList: []
 --- !u!1 &7516648825465125474
 GameObject:
   m_ObjectHideFlags: 0
