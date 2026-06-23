@@ -1,11 +1,11 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class InspectableObject : MonoBehaviour
+public class InspectableObject : MonoBehaviour, IPointerClickHandler
 {
-    public void StartRotate()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        // Implement the logic to start rotating the object
-        Debug.Log("Starting rotation for: " + gameObject.name);
-        // You can add more logic here, such as enabling a rotation script or animation
+        Debug.Log($"Clicked on {gameObject.name}");
+        ObjectInspector.Instance.StartInspection(gameObject);
     }
 }
