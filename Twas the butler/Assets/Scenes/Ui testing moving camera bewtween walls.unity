@@ -11112,7 +11112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1077734726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12529,9 +12529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f4b7baf1942b9479a49569b1e92d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterSlider: {fileID: 0}
-  bgmSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
+  masterSlider: {fileID: 554357062}
+  bgmSlider: {fileID: 1338526520}
+  sfxSlider: {fileID: 2067080925}
   model: {fileID: 2037458529}
 --- !u!1 &1291662639
 GameObject:
@@ -13238,7 +13238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1339756241
 Transform:
   m_ObjectHideFlags: 0
@@ -19300,7 +19300,7 @@ Transform:
   m_GameObject: {fileID: 2029628595}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.04, y: 0.43700027, z: -5.2}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25749,6 +25749,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6169291526782953393, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6228999185986033427, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -25763,7 +25767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6679463753225573162, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: gameObjectsToToggle.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6679463753225573162, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: 'gameObjectsToToggle.Array.data[3]'
@@ -25791,7 +25795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7516648825465125474, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7776771789447504858, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -25810,9 +25814,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8859096084165496739, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: gameObjectsToToggle.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859096084165496739, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: 'gameObjectsToToggle.Array.data[0]'
       value: 
       objectReference: {fileID: 291969839}
+    - target: {fileID: 8859096084165496739, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: 'gameObjectsToToggle.Array.data[2]'
+      value: 
+      objectReference: {fileID: 72147515}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8398491616883444322, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
