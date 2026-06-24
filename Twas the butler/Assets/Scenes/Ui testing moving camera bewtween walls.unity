@@ -5911,6 +5911,7 @@ MonoBehaviour:
   - {fileID: 231845643}
   - {fileID: 1339756240}
   - {fileID: 1833349213}
+  - {fileID: 72147515}
   gameObjectsToAddToList:
   - {fileID: 1339756240}
   gameObjectsToRemoveFromList:
@@ -16461,6 +16462,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caf2498b5dc8484e8afa7bbe8e51b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  degreesPerPixel: 0.15
+  maxFlickDegrees: 120
+  speedForMaxFlick: 2000
+  followSpeed: 12
+  minSwipePixels: 25
+  maxSampleTime: 0.25
 --- !u!1 &1727130200
 GameObject:
   m_ObjectHideFlags: 0
@@ -20950,6 +20958,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6679463753225573162, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: gameObjectsToToggle.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679463753225573162, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
+      propertyPath: 'gameObjectsToToggle.Array.data[3]'
+      value: 
+      objectReference: {fileID: 72147515}
     - target: {fileID: 6916364510075019010, guid: 7b56192a940cf0345811f33e777ef3d4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1920
