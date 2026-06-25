@@ -491,6 +491,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &1507815009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1148201726788164598, guid: 942c4f4ad3e8e9d4080738b33c61ae1b, type: 3}
+  m_PrefabInstance: {fileID: 357914072310548667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1722967082
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,19 +521,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722967082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.84112144, y: 0.84112144, z: 0.84112144}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1063124514}
-  m_Father: {fileID: 2044601627}
+  m_Father: {fileID: 7936949690468237335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 366, y: 168}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -420, y: -1720}
+  m_SizeDelta: {x: 355, y: 3000}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1722967084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySlots: []
-  slotPrefab: {fileID: 1148201726788164598, guid: 942c4f4ad3e8e9d4080738b33c61ae1b, type: 3}
+  slotPrefab: {fileID: 1507815009}
   testClue: {fileID: 0}
 --- !u!114 &1722967085
 MonoBehaviour:
@@ -557,10 +562,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 50
+    m_Right: 50
+    m_Top: 50
+    m_Bottom: 50
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -588,7 +593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2044601624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,8 +668,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1722967083}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -978,11 +982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3457253765570895471, guid: 942c4f4ad3e8e9d4080738b33c61ae1b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 3457253765570895471, guid: 942c4f4ad3e8e9d4080738b33c61ae1b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 3457253765570895471, guid: 942c4f4ad3e8e9d4080738b33c61ae1b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1993,12 +1997,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whiteboard: {fileID: 166389925837822773}
+  inventoryUI: {fileID: 1722967082}
+  ammountOfYToMoveInventoryUI: 1095
   ammountOfYToMove: 2.5
   movementDuration: 0.25
   buttonsToToggleWithTheWiteboard:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 689599319880918044}
+  - {fileID: 5469127133790558947}
+  - {fileID: 6714557070859903707}
 --- !u!224 &1559524161561675282
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3561,7 +3567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -40.45, y: -32.369995}
+  m_AnchoredPosition: {x: -40.44995, y: -32.369995}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &3716731797573957576
@@ -4835,7 +4841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &5349320925827347956
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,6 +6573,7 @@ RectTransform:
   - {fileID: 7285049539762983482}
   - {fileID: 6229927777548964753}
   - {fileID: 3707663010410522672}
+  - {fileID: 1722967083}
   m_Father: {fileID: 3855346887066879933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
