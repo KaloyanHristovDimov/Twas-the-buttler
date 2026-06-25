@@ -50,7 +50,8 @@ public class RedString : MonoBehaviour
         connectedObjects.Add(end.GetComponentInChildren<Transform>().gameObject);
         // Stretch the string between the two points
         transform.position = (start.transform.position + end.transform.position) / 2;
-        
+        transform.LookAt(end.transform);
+
 
     }
 }
