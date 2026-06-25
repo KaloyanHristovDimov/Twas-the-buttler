@@ -20,7 +20,6 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
         inventorySlots = GetComponentsInChildren<Slot>();
-        slotPrefab = inventorySlots[0].gameObject;
     }
 
     public void AddClueToInventory(ClueData clueData)
