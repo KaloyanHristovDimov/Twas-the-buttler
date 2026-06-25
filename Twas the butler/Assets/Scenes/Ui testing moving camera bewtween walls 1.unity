@@ -15360,6 +15360,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caf2498b5dc8484e8afa7bbe8e51b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  degreesPerPixel: 0.15
+  maxFlickDegrees: 120
+  speedForMaxFlick: 2000
+  followSpeed: 12
+  minSwipePixels: 25
+  maxSampleTime: 0.25
 --- !u!1 &1727130200
 GameObject:
   m_ObjectHideFlags: 0
@@ -29757,7 +29764,7 @@ Transform:
   m_GameObject: {fileID: 8352027591481827358}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -0.00055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
