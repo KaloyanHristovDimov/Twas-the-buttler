@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-        Instantiate(slotPrefab, slotPrefab.transform.parent).GetComponent<Slot>().SetClueData(clueData);
+        Instantiate(slotPrefab, gameObject.transform).GetComponent<Slot>().SetClueData(clueData);
     }
 
     public void RemoveClueFromInventory(ClueData clueData)

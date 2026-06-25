@@ -12,7 +12,7 @@ public class ToolManager : MonoBehaviour
     }
     public static ToolManager Instance { get; private set; }
 
-    public ToolType currentTool { get; private set; } = ToolType.None;
+    public ToolType currentTool = ToolType.None;
 
     private void Awake()
     {

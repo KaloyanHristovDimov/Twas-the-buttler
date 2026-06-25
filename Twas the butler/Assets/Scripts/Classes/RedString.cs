@@ -51,6 +51,9 @@ public class RedString : MonoBehaviour
         // Stretch the string between the two points
         transform.position = (start.transform.position + end.transform.position) / 2;
         transform.LookAt(end.transform);
+        float distance = Vector3.Distance(start.transform.position, end.transform.position);
+        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, distance);
+
 
 
     }

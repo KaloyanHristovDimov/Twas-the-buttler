@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class DetectIfClicked : MonoBehaviour
 {
-    [SerializeField] private Collider clickableObject;
+    [SerializeField] private BoxCollider clickableObject;
 
     [SerializeField] private UnityEvent OnDetected;
 
