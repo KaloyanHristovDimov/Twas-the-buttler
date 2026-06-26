@@ -16,7 +16,6 @@ public class UnlockedBool : MonoBehaviour
 
     [SerializeField] private GameObject button;
 
-    [SerializeField] private GameObject unlockedImage;
 
     [SerializeField] private GameObject lockedImage;
 
