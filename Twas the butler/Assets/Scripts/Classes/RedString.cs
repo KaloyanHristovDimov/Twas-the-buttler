@@ -48,11 +48,24 @@ public class RedString : MonoBehaviour
         // Set the start and end points of the string
         connectedObjects.Add(start.GetComponentInChildren<Transform>().gameObject);
         connectedObjects.Add(end.GetComponentInChildren<Transform>().gameObject);
-        // Stretch the string between the two points
-        transform.position = (start.transform.position + end.transform.position) / 2;
-        transform.LookAt(end.transform);
-        float distance = Vector3.Distance(start.transform.position, end.transform.position);
-        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, distance);
+        Vector3 startPos = start.transform.GetChild(0).position;
+        Vector3 endPos = end.transform.GetChild(0).position;
+
+        // Place in the middle
+        transform.position = (startPos + endPos) * 0.5f;
+
+        // Direction from start to end
+        Vector3 direction = endPos - startPos;
+
+        // Rotate so the capsule's Y axis points along the direction
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
+
+        // Stretch along Y (capsule height)
+        float distance = direction.magnitude;
+
+        Vector3 scale = transform.localScale;
+        scale.y = distance * 0.5f; // Default capsule height is 2 units
+        transform.localScale = scale;
 
 
 
