@@ -7,7 +7,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public SpriteRenderer noteSpriteRenderer;
     public ClueData clueData;
 
-    public GameObject stringDragVisualPrefab;
+    //public GameObject stringDragVisualPrefab;
     public GameObject StringPrefab;
 
     public void SetClueData(ClueData data)
@@ -100,7 +100,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 Debug.Log("Dragging over a valid string target: " + targetNote.name);
 
                 GameObject stringObject = Instantiate(StringPrefab, transform.position, Quaternion.identity);
-                RedString redString = stringObject.GetComponent<RedString>();
+                RedString redString = stringObject.GetComponentInChildren<RedString>();
 
                 redString.SetClueData(clueData, targetNote.clueData);
                 redString.SetStartAndEndPoints(this.gameObject, targetNote.gameObject);
