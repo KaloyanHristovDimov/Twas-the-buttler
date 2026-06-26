@@ -119,6 +119,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &146860721
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 537.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 793.3333
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758921826597821254, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146386891758001280, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+      propertyPath: m_Name
+      value: AudioSettingsModel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+--- !u!114 &146860722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1501795666779332469, guid: 2d39db7a6bd394748815fc807b2ad8b5, type: 3}
+  m_PrefabInstance: {fileID: 146860721}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e3ff5bd787c6d54da2197c97ff00ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &359403474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5025,6 +5093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3883367768150720085}
+  - component: {fileID: 5576818856569013821}
   m_Layer: 5
   m_Name: 'Gameplay Audio settings menu '
   m_TagString: Untagged
@@ -5032,6 +5101,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &5576818856569013821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576818856569013820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f4b7baf1942b9479a49569b1e92d62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 1486420362775480220}
+  bgmSlider: {fileID: 6178179337425845539}
+  sfxSlider: {fileID: 1615917891501596394}
+  model: {fileID: 146860722}
 --- !u!114 &5670611317035158967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7788,3 +7873,4 @@ SceneRoots:
   - {fileID: 4831699372071187881}
   - {fileID: 6705920335915175079}
   - {fileID: 2044601627}
+  - {fileID: 146860721}
