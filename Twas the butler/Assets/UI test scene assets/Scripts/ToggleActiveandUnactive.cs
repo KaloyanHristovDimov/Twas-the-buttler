@@ -48,4 +48,9 @@ public class ToggleActiveandUnactive : MonoBehaviour
             }
         }
     }
+
+    public void LogIfActivated()
+    {
+        Debug.Log("Button pressed");
+    }
 }

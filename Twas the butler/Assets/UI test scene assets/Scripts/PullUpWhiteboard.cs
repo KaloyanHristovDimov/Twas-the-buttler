@@ -17,7 +17,6 @@ public class PullUpWhiteboard : MonoBehaviour
 
     [SerializeField] private List<GameObject> buttonsToToggleWithTheWiteboard;
     
-    private bool moving = false;
     
     
     IEnumerator MoveObject(GameObject gameObjectToMove, float ammountOfYToMove, float duration)

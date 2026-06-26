@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,7 +21,7 @@ public class UnlockedBool : MonoBehaviour
     [SerializeField] private GameObject lockedImage;
 
 
-    void Start()
+    public void CheckIfUnlocked()
     {
         unlocked = persistentValuesScript.GetBool(level - 1);
         if (unlocked)
