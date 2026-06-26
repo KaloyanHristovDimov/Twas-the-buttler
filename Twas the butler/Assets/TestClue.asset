@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueName: Test
   clueType: 0
-  clueSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  clueSprite: {fileID: 21300000, guid: 9ff9115fad55a514cbdb8207574f6581, type: 3}

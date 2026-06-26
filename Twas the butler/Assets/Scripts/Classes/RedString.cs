@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class RedString : MonoBehaviour
+public class RedString : MonoBehaviour, IPointerClickHandler
 {
     public HashSet<ClueData> clues = new HashSet<ClueData>();
     public enum StringTag
@@ -12,6 +13,7 @@ public class RedString : MonoBehaviour
         Killed
     }
     public StringTag stringTag = StringTag.None;
+    public GameObject label;
 
     public HashSet<GameObject> connectedObjects = new HashSet<GameObject>();
 
@@ -67,7 +69,19 @@ public class RedString : MonoBehaviour
         scale.y = distance * 0.5f; // Default capsule height is 2 units
         transform.localScale = scale;
 
+        label = GetComponentInChildren<TMPro.TextMeshPro>().gameObject;
+        label.transform.position = (startPos + endPos) * 0.5f;
+        label.transform.position += new Vector3(0, 0, -0.2f); // Offset above the string
+        label.transform.rotation = Quaternion.Euler(0, 0, 0);
+        label.GetComponent<KeepScale>().ReturnScale();
 
+    }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(ToolManager.Instance.currentTool == ToolManager.ToolType.StringDeleteTool)
+        {
+            Destroy(gameObject);
+        }
     }
 }

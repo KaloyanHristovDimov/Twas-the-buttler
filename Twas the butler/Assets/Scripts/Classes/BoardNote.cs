@@ -41,14 +41,6 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 // Handle red string dragging logic here
                 Debug.Log("Started dragging note for red string: " + clueData.clueName);
                 break;
-            case ToolManager.ToolType.StringTagTool:
-                // Handle string tagging logic here
-                Debug.Log("Started dragging note for string tagging: " + clueData.clueName);
-                break;
-            case ToolManager.ToolType.StringDeleteTool:
-                // Handle string deletion logic here
-                Debug.Log("Started dragging note for string deletion: " + clueData.clueName);
-                break;
             default:
                 Debug.Log("Started dragging note with no tool: " + clueData.clueName);
                 break;
@@ -66,13 +58,6 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 break;
             case ToolManager.ToolType.RedStringTool:
                 HandleRedStringConnection(eventData);
-                break;
-            case ToolManager.ToolType.StringTagTool:
-                // Handle string tagging logic here
-                Debug.Log("Tagging string: " + clueData.clueName);
-                break;
-            case ToolManager.ToolType.StringDeleteTool:
-                HandleRemoveString(eventData);
                 break;
             default:
                 Debug.Log("No tool selected, dropping note: " + clueData.clueName);
@@ -92,14 +77,6 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             case ToolManager.ToolType.RedStringTool:
                 // Handle red string dragging logic here
                 Debug.Log("Dragging note for red string: " + clueData.clueName);
-                break;
-            case ToolManager.ToolType.StringTagTool:
-                // Handle string tagging logic here
-                Debug.Log("Tagging string: " + clueData.clueName);
-                break;
-            case ToolManager.ToolType.StringDeleteTool:
-                // Handle string deletion logic here
-                Debug.Log("Deleting string: " + clueData.clueName);
                 break;
             default:
                 Debug.Log("Dragging note with no tool: " + clueData.clueName);
@@ -160,20 +137,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
     }
 
-    private void HandleRemoveString(PointerEventData eventData)
-    {
-        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            RedString redString = hit.collider.GetComponent<RedString>();
-            if (redString != null)
-            {
-                StringManager.Instance.RemoveRedString(redString);
-                Destroy(redString.gameObject);
-                Debug.Log("Removed string: " + redString.name);
-            }
-        }
-    }
+    
 
 }
 
