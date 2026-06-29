@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class ObjectInspector : MonoBehaviour, IDragHandler 
@@ -10,6 +11,8 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
     public float rotationSpeed = 100f;
     private Vector3 originalObjectPosition;
     private Quaternion originalObjectRotation;
+
+    public UnityEvent onStartInspection;
 
     private void Awake()
     {
@@ -31,6 +34,7 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         originalObjectRotation = selectedObject.transform.rotation;
         selectedObject.transform.SetParent(transform);
         selectedObject.transform.localPosition = Vector3.zero;
+        onStartInspection.Invoke();
     }
 
     public void OnDrag(PointerEventData eventData)
