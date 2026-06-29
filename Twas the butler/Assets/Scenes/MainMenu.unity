@@ -3508,6 +3508,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: unlockedImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5846,6 +5878,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: unlockedImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5942,6 +6006,38 @@ PrefabInstance:
     - target: {fileID: 5554921665742943066, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
       propertyPath: m_Name
       value: unlockedImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7623,6 +7719,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: unlockedImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_text
+      value: The case of the dead noble son
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7794,6 +7926,54 @@ PrefabInstance:
     - target: {fileID: 5554921665742943066, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
       propertyPath: m_Name
       value: unlockedImage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_text
+      value: Unnamed Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10804,6 +10984,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: unlockedImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11311,6 +11523,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: unlockedImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11595,6 +11839,38 @@ PrefabInstance:
     - target: {fileID: 5554921665742943066, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
       propertyPath: m_Name
       value: unlockedImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840404315738308555, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867613964452160630, guid: 84bc85f5ab6bed648847a0c00c0752cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
