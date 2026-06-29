@@ -6,6 +6,6 @@ public class Solution : ScriptableObject
     public ClueData requiredClueA;
     public ClueData requiredClueB;
 
-    public RedString.StringTag requiredStringTag;
+    public ClueData.StringTag requiredStringTag;
 
 }

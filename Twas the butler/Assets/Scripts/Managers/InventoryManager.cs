@@ -34,6 +34,15 @@ public class InventoryManager : MonoBehaviour
             }
         }
         Instantiate(slotPrefab, gameObject.transform).GetComponent<Slot>().SetClueData(clueData);
+        if (clueData.asosiatedStringTag != ClueData.StringTag.None)
+        {
+            AddTagToInventory(clueData.asosiatedStringTag);
+        }
+    }
+
+    public void AddTagToInventory(ClueData.StringTag stringTag)
+    {
+
     }
 
     public void RemoveClueFromInventory(ClueData clueData)

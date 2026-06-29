@@ -7,4 +7,6 @@ public class ClueData : ScriptableObject
     public enum ClueType { Note, Object, Location, Person }
     public ClueType clueType;
     public Sprite clueSprite;
+    public enum StringTag { None, Used, Killed, Family }
+    public StringTag asosiatedStringTag;
 }

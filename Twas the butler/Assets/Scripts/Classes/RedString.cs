@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,13 +7,8 @@ using UnityEngine.EventSystems;
 public class RedString : MonoBehaviour, IPointerClickHandler
 {
     public HashSet<ClueData> clues = new HashSet<ClueData>();
-    public enum StringTag
-    {
-        None,
-        Used,
-        Killed
-    }
-    public StringTag stringTag = StringTag.None;
+
+    public ClueData.StringTag stringTag = ClueData.StringTag.None;
     public GameObject label;
 
     public HashSet<GameObject> connectedObjects = new HashSet<GameObject>();
@@ -26,23 +22,11 @@ public class RedString : MonoBehaviour, IPointerClickHandler
     }
 
 
-    public void SetTag(StringTag newTag)
+    public void SetTag(ClueData.StringTag newTag)
     {
         stringTag = newTag;
-        // Update visual representation based on the tag
-        // For example, change color or material of the string
-        switch (stringTag)
-        {
-            case StringTag.Used:
-                GetComponent<Renderer>().material.color = Color.red;
-                break;
-            case StringTag.Killed:
-                GetComponent<Renderer>().material.color = Color.black;
-                break;
-            default:
-                GetComponent<Renderer>().material.color = Color.white;
-                break;
-        }
+        label.GetComponent<TextMeshPro>().text = stringTag.ToString();
+        
     }
 
     public void SetStartAndEndPoints(GameObject start, GameObject end)

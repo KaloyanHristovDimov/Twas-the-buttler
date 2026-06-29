@@ -30,7 +30,7 @@ public class StringManager : MonoBehaviour
         redStrings.Remove(redString);
     }
 
-    public bool HasString(ClueData clueA, ClueData clueB, RedString.StringTag stringTag)
+    public bool HasString(ClueData clueA, ClueData clueB, ClueData.StringTag stringTag)
     {
         foreach (var redString in redStrings)
         {
