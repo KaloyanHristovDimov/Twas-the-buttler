@@ -2288,6 +2288,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693126315}
   m_CullTransparentMesh: 1
+--- !u!1 &744940628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744940629}
+  m_Layer: 0
+  m_Name: filler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &744940629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744940628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 176.8022, y: 354.19226, z: -80.45871}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823034644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,7 +4188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectsToToggle:
   - {fileID: 882144327}
-  - {fileID: 0}
+  - {fileID: 166389925837822773}
   - {fileID: 1600469856}
   gameObjectsToAddToList: []
   gameObjectsToRemoveFromList: []
@@ -6260,7 +6291,7 @@ MonoBehaviour:
   masterSlider: {fileID: 1328582244}
   bgmSlider: {fileID: 1614771786}
   sfxSlider: {fileID: 1835747111}
-  model: {fileID: 0}
+  model: {fileID: 1842527326}
 --- !u!114 &1505539633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8790,7 +8821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whiteboard: {fileID: 166389925837822773}
-  inventoryUI: {fileID: 0}
+  inventoryUI: {fileID: 744940628}
   ammountOfYToMoveInventoryUI: 1095
   ammountOfYToMove: 2.5
   movementDuration: 0.25
@@ -9282,3 +9313,4 @@ SceneRoots:
   - {fileID: 6705920335915175079}
   - {fileID: 146860721}
   - {fileID: 842393786}
+  - {fileID: 744940629}
