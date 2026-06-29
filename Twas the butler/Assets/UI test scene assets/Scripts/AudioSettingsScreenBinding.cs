@@ -9,7 +9,7 @@ public class AudioSettingsScreenBinding : MonoBehaviour
     public Slider sfxSlider;
 
     [Header("Shared model instance")]
-    public PersistentValues model;
+    public AudioSettingsModel model;
 
     bool _updatingUI;
 

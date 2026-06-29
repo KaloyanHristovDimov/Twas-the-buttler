@@ -388,7 +388,7 @@ MonoBehaviour:
   noteSpriteRenderer: {fileID: 0}
   clueData: {fileID: 0}
   stringDragVisualPrefab: {fileID: 0}
-  StringPrefab: {fileID: 7352383312788608241, guid: 0cdf53c1a055d344ab30db989c3cbb00, type: 3}
+  StringPrefab: {fileID: 7226620679831610844, guid: a6c82450eda1cb24a8361b479201f23d, type: 3}
 --- !u!65 &5053614824151901422
 BoxCollider:
   m_ObjectHideFlags: 0

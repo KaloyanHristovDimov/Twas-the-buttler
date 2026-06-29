@@ -18,7 +18,8 @@ public class KeepScale : MonoBehaviour
         Vector3 parentScale = transform.parent.localScale;
 
         transform.localScale = new Vector3(
-            parentScale.x != 0 ? originalWorldScale.x * parentScale.x : transform.localScale.x, parentScale.y, parentScale.z
+            parentScale.x, parentScale.y * originalWorldScale.y, parentScale.z
         );
+        Debug.Log("Returned scale");
     }
 }

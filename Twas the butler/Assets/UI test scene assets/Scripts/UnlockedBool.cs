@@ -12,18 +12,13 @@ public class UnlockedBool : MonoBehaviour
 
     [SerializeField] private GameObject parentPanel;
 
-    [SerializeField] private PersistentValues persistentValuesScript;
-
     [SerializeField] private GameObject button;
-
-    [SerializeField] private GameObject unlockedImage;
 
     [SerializeField] private GameObject lockedImage;
 
-
     public void CheckIfUnlocked()
     {
-        unlocked = persistentValuesScript.GetBool(level - 1);
+        unlocked = PersistentValues.Instance.GetBool(level - 1);
         if (unlocked)
         {
             button.SetActive(true);

@@ -12,6 +12,22 @@ public class AudioSettingsModel : MonoBehaviour
     public UnityEvent<float> OnBgmChanged = new UnityEvent<float>();
     public UnityEvent<float> OnSfxChanged = new UnityEvent<float>();
 
+
+    private void Start()
+    {
+        SetMaster(PersistentValues.Instance.master);
+        SetBgm(PersistentValues.Instance.bgm);
+        SetSfx(PersistentValues.Instance.sfx);
+    }
+
+    private void OnDisable()
+    {
+        PersistentValues.Instance.master = master;
+        PersistentValues.Instance.bgm = bgm;
+        PersistentValues.Instance.sfx = sfx;
+    }
+
+
     public void SetMaster(float v)
     {
         v = Mathf.Clamp01(v);
