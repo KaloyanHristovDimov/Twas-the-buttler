@@ -1,5 +1,7 @@
 using UnityEngine;
 using NaughtyAttributes;
+using UnityEngine.UI;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -34,7 +36,8 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-        Instantiate(slotPrefab, gameObject.transform).GetComponent<Slot>().SetClueData(clueData);
+        
+        Instantiate(slotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>(true).gameObject.transform).GetComponent<Slot>().SetClueData(clueData);
         if (clueData.asosiatedStringTag != ClueData.StringTag.None)
         {
             AddTagToInventory(clueData.asosiatedStringTag);
@@ -43,7 +46,20 @@ public class InventoryManager : MonoBehaviour
 
     public void AddTagToInventory(ClueData.StringTag stringTag)
     {
-        Instantiate(tagSlotPrefab, gameObject.transform).GetComponent<TagSlot>().SetTag(stringTag);
+        if (gameObject.GetComponentInChildren<Slot>().ParentHasOtherActiveImage()) 
+            Instantiate(tagSlotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>().gameObject.transform).GetComponent<TagSlot>().SetTag(stringTag);
+        else 
+        {
+            GameObject tag = Instantiate(
+                                tagSlotPrefab,
+                                gameObject.GetComponentInChildren<VerticalLayoutGroup>().transform
+                                );
+
+            tag.GetComponent<TagSlot>().SetTag(stringTag);
+
+            if(tag.GetComponent<Image>() != null) tag.GetComponent<Image>().enabled = false;
+            if(tag.GetComponentInChildren<TextMeshProUGUI>() != null) tag.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+        }
     }
 
     public void RemoveClueFromInventory(ClueData clueData)

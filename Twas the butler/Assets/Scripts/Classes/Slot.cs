@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -39,7 +40,14 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     {
         if (HasClueData())
         {
-              slotImage.sprite = clueData.clueSprite;
+            if (ParentHasOtherActiveImage())
+                slotImage.sprite = clueData.clueSprite;
+            else 
+            {
+                if (slotImage == null) Debug.Log("No slot image");
+                slotImage.sprite = clueData.clueSprite;
+                slotImage.enabled = false;
+            }
         }
         else
         {
@@ -49,6 +57,29 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             }
             Destroy(gameObject);
         }
+    }
+
+    public bool ParentHasOtherActiveImage()
+    {
+        Transform parent = transform.parent;
+
+        if (parent == null)
+            return false;
+
+        foreach (Transform child in parent)
+        {
+            if (child == transform)
+                continue;
+
+            Image image = child.GetComponent<Image>();
+
+            if (image != null && image.enabled && child.gameObject.activeInHierarchy)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public ClueData GetClueData()
