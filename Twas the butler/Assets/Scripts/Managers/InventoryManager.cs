@@ -6,6 +6,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
     public Slot[] inventorySlots;
     public GameObject slotPrefab;
+    public GameObject tagSlotPrefab;
 
     public ClueData testClue;
 
@@ -42,7 +43,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddTagToInventory(ClueData.StringTag stringTag)
     {
-
+        Instantiate(tagSlotPrefab, gameObject.transform).GetComponent<TagSlot>().SetTag(stringTag);
     }
 
     public void RemoveClueFromInventory(ClueData clueData)
