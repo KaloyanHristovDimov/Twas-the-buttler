@@ -8718,6 +8718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484c5422a231db44d80d39e538f00586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  copyObject: 1
   rotationSpeed: 1
   onStartInspection:
     m_PersistentCalls:
