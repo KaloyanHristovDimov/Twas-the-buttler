@@ -8,7 +8,7 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
 
     private GameObject selectedObject;
 
-    public float rotationSpeed = 100f;
+    public float rotationSpeed = 1f;
     private Vector3 originalObjectPosition;
     private Quaternion originalObjectRotation;
 
@@ -26,14 +26,16 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         }
     }
 
-    public void StartInspection(GameObject gameObject)
+    public void StartInspection(GameObject gameObject, float inspectDistance)
     {
         if (selectedObject != null) return;
         selectedObject = gameObject;
         originalObjectPosition = selectedObject.transform.position;
         originalObjectRotation = selectedObject.transform.rotation;
         selectedObject.transform.SetParent(transform);
-        selectedObject.transform.localPosition = Vector3.zero;
+        Vector3 objectScale = selectedObject.transform.localScale;
+        selectedObject.transform.localScale = new Vector3(objectScale.x/2, objectScale.y / 2, objectScale.z / 2);
+        selectedObject.transform.localPosition = new Vector3(inspectDistance/2, 0f, 0f);
         onStartInspection.Invoke();
     }
 
@@ -58,6 +60,8 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
     {
         if (selectedObject == null) return;
         selectedObject.transform.SetParent(null);
+        Vector3 objectScale = selectedObject.transform.localScale;
+        selectedObject.transform.localScale = new Vector3(objectScale.x * 2, objectScale.y * 2, objectScale.z * 2);
         selectedObject.transform.position = originalObjectPosition;
         selectedObject.transform.rotation = originalObjectRotation;
         selectedObject = null;
