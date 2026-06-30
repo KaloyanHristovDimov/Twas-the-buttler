@@ -72,7 +72,10 @@ public class RedString : MonoBehaviour, IPointerClickHandler
     {
         if(ToolManager.Instance.currentTool == ToolManager.ToolType.StringDeleteTool)
         {
+            StringManager.Instance.RemoveRedString(this);
+            InventoryManager.Instance.AddTagToInventory(stringTag);
             Destroy(gameObject.transform.parent.gameObject);
+
         }
     }
 }
