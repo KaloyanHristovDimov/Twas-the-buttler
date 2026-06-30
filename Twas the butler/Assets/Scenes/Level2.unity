@@ -2543,12 +2543,12 @@ GameObject:
   - component: {fileID: 657621333}
   - component: {fileID: 657621334}
   m_Layer: 0
-  m_Name: SpherePivotPoint
+  m_Name: PictureCluePivotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &657621333
 Transform:
   m_ObjectHideFlags: 0
@@ -2558,7 +2558,7 @@ Transform:
   m_GameObject: {fileID: 657621332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.88, y: 8, z: -0.21}
+  m_LocalPosition: {x: -5.871, y: 7.385, z: 5.595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2577,8 +2577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueData: {fileID: 11400000, guid: 42b3eb049e42ed342814aaf905ce57a9, type: 2}
-  destroyOnClick: 1
+  clueData: {fileID: 11400000, guid: dccb7ca8e14301b4cafd45cb00767bea, type: 2}
+  destroyOnClick: 0
   OnCluePickedUpEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14689,7 +14689,7 @@ GameObject:
   - component: {fileID: 8858982413094356668}
   m_Layer: 0
   m_Name: Whiteboard
-  m_TagString: Untagged
+  m_TagString: WhiteBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22585,7 +22585,7 @@ GameObject:
   - component: {fileID: 2676314754546927802}
   - component: {fileID: 9145364850835365853}
   m_Layer: 4
-  m_Name: Sphere
+  m_Name: PictureClue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22598,7 +22598,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9145364850835365852}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418c19fa9353ecc48a63f4c040f7f044, type: 3}
   m_Name: 

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
+using TMPro;
 
 public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -102,6 +104,70 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 GameObject stringObject = Instantiate(StringPrefab, transform.position, Quaternion.identity, gameObject.transform);
                 RedString redString = stringObject.GetComponentInChildren<RedString>();
 
+                GameObject rotationObject = gameObject.transform.parent.transform.parent.gameObject;
+                Transform[] children = stringObject.GetComponentsInChildren<Transform>();
+                foreach (Transform child in children) 
+                {
+                    Transform[] grandChildren = child.GetComponentsInChildren<Transform>();
+                    foreach (Transform grandChild in grandChildren) 
+                    {
+                        if (grandChild.GetComponent<BoxCollider>() != null || grandChild.GetComponent<TextMeshPro>() != null)
+                        {
+                            switch (rotationObject.transform.rotation.eulerAngles.y)
+                            {
+                                case 90:
+                                    if (grandChild.GetComponent<BoxCollider>() != null)
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x + 0.02f, grandChild.position.y, grandChild.position.z);
+                                        grandChild.eulerAngles = new Vector3(0f, 90f, 0f);
+                                    }
+                                    else
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x + 0.01f, grandChild.position.y, grandChild.position.z);
+                                        grandChild.eulerAngles = new Vector3(0f, 90f, 0f);
+                                    }
+                                    break;
+                                case 180:
+                                    if (grandChild.GetComponent<BoxCollider>() != null)
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z - 0.02f);
+                                        grandChild.eulerAngles = new Vector3(0f, 180f, 0f);
+                                    }
+                                    else
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z - 0.01f);
+                                        grandChild.eulerAngles = new Vector3(0f, 180f, 0f);
+                                    }
+                                    break;
+                                case 270:
+                                    if (grandChild.GetComponent<BoxCollider>() != null)
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x - 0.02f, grandChild.position.y, grandChild.position.z);
+                                        grandChild.eulerAngles = new Vector3(0f, 270, 0f);
+                                    }
+                                    else
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x - 0.01f, grandChild.position.y, grandChild.position.z);
+                                        grandChild.eulerAngles = new Vector3(0f, 270, 0f);
+                                    }
+                                    break;
+                                case 0:
+                                    if (grandChild.GetComponent<BoxCollider>() != null)
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z + 0.02f);
+                                        grandChild.eulerAngles = new Vector3(0f, 0f, 0f);
+                                    }
+                                    else
+                                    {
+                                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z + 0.01f);
+                                        grandChild.eulerAngles = new Vector3(0f, 0f, 0f);
+                                    }
+                                    break;
+                            }
+                        }
+                    }
+                }
+
                 redString.SetClueData(clueData, targetNote.clueData);
                 redString.SetStartAndEndPoints(this.gameObject, targetNote.gameObject);
                 StringManager.Instance.AddRedString(redString);
@@ -118,9 +184,26 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             if (board != null)
             {
                 // Move the note to the new position on the board
+                GameObject rotationObject = gameObject.transform.parent.transform.parent.gameObject;
+                transform.localEulerAngles = Vector3.zero;
                 Vector3 worldPosition = hit.point;
-                float offset = gameObject.transform.parent.GetComponentInChildren<Board>().xOffset;
-                Vector3 newPosition = new Vector3(worldPosition.x + offset, worldPosition.y, worldPosition.z);
+                Vector3 newPosition = Vector3.zero + worldPosition;
+                float xOffset = gameObject.transform.parent.gameObject.GetComponent<Board>().xOffset;
+                switch (rotationObject.transform.rotation.eulerAngles.y)
+                {
+                    case 90:
+                        newPosition = new Vector3(worldPosition.x + xOffset, worldPosition.y, worldPosition.z);
+                        break;
+                    case 180:
+                        newPosition = new Vector3(worldPosition.x, worldPosition.y, worldPosition.z - xOffset);
+                        break;
+                    case -90:
+                        newPosition = new Vector3(worldPosition.x - xOffset, worldPosition.y, worldPosition.z);
+                        break;
+                    case 0:
+                        newPosition = new Vector3(worldPosition.x, worldPosition.y, worldPosition.z + xOffset);
+                        break;
+                }
                 transform.position = newPosition;
                 Debug.Log("Moved note to new position: " + worldPosition);
             }

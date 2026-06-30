@@ -40,14 +40,31 @@ public class Board : MonoBehaviour
 
     public void PlaceNote(ClueData clueData, Vector3 worldPosition)
     {
-        Vector3 newPosition = new Vector3(worldPosition.x + xOffset, worldPosition.y, worldPosition.z);
+        GameObject rotationObject = gameObject.transform.parent.gameObject;
+        Vector3 newPosition = Vector3.zero;
+
+        switch (rotationObject.transform.rotation.eulerAngles.y) 
+        {
+            case 90:
+                newPosition = new Vector3(worldPosition.x + xOffset, worldPosition.y, worldPosition.z);
+                break;
+            case 180:
+                newPosition = new Vector3(worldPosition.x, worldPosition.y, worldPosition.z - xOffset);
+                break;
+            case 270:
+                newPosition = new Vector3(worldPosition.x - xOffset, worldPosition.y, worldPosition.z);
+                break;
+            case 0:
+                newPosition = new Vector3(worldPosition.x, worldPosition.y, worldPosition.z + xOffset);
+                break;
+        }
 
         GameObject noteObject = Instantiate(
             notePrefab,
             newPosition,
             Quaternion.identity,
             transform);
-
+        noteObject.transform.localEulerAngles = Vector3.zero;
         noteObject.GetComponent<BoardNote>().SetClueData(clueData);
     }
 
