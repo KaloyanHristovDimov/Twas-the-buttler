@@ -5466,7 +5466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clueData: {fileID: 11400000, guid: f5f669fdd028b0541992a02dc6674cee, type: 2}
-  destroyOnClick: 0
+  destroyOnClick: 1
   OnCluePickedUpEvent:
     m_PersistentCalls:
       m_Calls: []

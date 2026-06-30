@@ -20,5 +20,6 @@ public class Clue : MonoBehaviour, IPointerClickHandler
     public void HandleCopies(Clue originalClue)
     {
         originalClueGameObject = originalClue.gameObject;
+        Debug.Log("GameObject Linked");
     }
 }
