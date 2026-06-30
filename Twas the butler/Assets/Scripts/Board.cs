@@ -1,11 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Board : MonoBehaviour
 {
     public GameObject notePrefab;
-    public float xOffSet = -0.1f;
-
+    public float xOffset = -0.1f;
+    [SerializeField]
+    private List<ClueData> cluesToAddOnStart;
     //UI version
     //public void OnDrop(PointerEventData eventData)
     //{
@@ -29,13 +30,23 @@ public class Board : MonoBehaviour
     //    slot.ClearClueData();
     //}
 
+    private void Start()
+    {
+        foreach (ClueData clueData in cluesToAddOnStart) 
+        {
+            InventoryManager.Instance.AddClueToInventory(clueData);
+        }
+    }
+
     public void PlaceNote(ClueData clueData, Vector3 worldPosition)
     {
+        Vector3 newPosition = new Vector3(worldPosition.x + xOffset, worldPosition.y, worldPosition.z);
+
         GameObject noteObject = Instantiate(
             notePrefab,
-            new Vector3(worldPosition.x + xOffSet, worldPosition.y, worldPosition.z),
+            newPosition,
             Quaternion.identity,
-            transform.parent);
+            transform);
 
         noteObject.GetComponent<BoardNote>().SetClueData(clueData);
     }
