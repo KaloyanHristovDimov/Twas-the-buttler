@@ -119,7 +119,9 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 // Move the note to the new position on the board
                 Vector3 worldPosition = hit.point;
-                transform.position = worldPosition;
+                float offset = gameObject.transform.parent.GetComponentInChildren<Board>().xOffSet;
+                Vector3 newPosition = new Vector3(worldPosition.x + offset, worldPosition.y, worldPosition.z);
+                transform.position = newPosition;
                 Debug.Log("Moved note to new position: " + worldPosition);
             }
         }
