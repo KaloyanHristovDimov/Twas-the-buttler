@@ -5,12 +5,12 @@ public class Clue : MonoBehaviour, IPointerClickHandler
 {
     public ClueData clueData;
     public bool destroyOnClick = false;
-    public UnityEvent ?nCluePickedUpEvent;
+    public UnityEvent OnCluePickedUpEvent;
 
     public void OnPointerClick(PointerEventData eventData)
     {
         InventoryManager.Instance.AddClueToInventory(clueData);
-        ?nCluePickedUpEvent.Invoke();
+        OnCluePickedUpEvent.Invoke();
         if (destroyOnClick) Destroy(gameObject);
         else Destroy(GetComponent<Clue>());
     }

@@ -34,7 +34,7 @@ public class ToolManager : MonoBehaviour
             case ToolType.ClueMovingTool:
                 currentTool = ToolType.ClueMovingTool;
                 break;
-            case ToolType. RedStringTool:
+            case ToolType.RedStringTool:
                 currentTool = ToolType.RedStringTool;
                 break;
             case ToolType.StringTagTool:
@@ -48,4 +48,22 @@ public class ToolManager : MonoBehaviour
                 break;
         }
     }
+
+    public void SetToolClueMove()
+    {
+        SetCurrentTool(ToolType.ClueMovingTool);
+    }
+    public void SetToolRedString()
+    {
+        SetCurrentTool(ToolType.RedStringTool);
+    }
+    public void SetToolStringTag()
+    {
+        SetCurrentTool(ToolType.StringTagTool);
+    }
+    public void SetToolStringDelete()
+    {
+        SetCurrentTool(ToolType.StringDeleteTool);
+    }
+    
 }
