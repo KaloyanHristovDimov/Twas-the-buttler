@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7314596e331454bafae06f151ca9e7, type: 3}
+  m_Name: HatClue
+  m_EditorClassIdentifier: 
+  clueName: Hat
+  clueType: 1
+  clueSprite: {fileID: 21300000, guid: aa5355694f479b14f8f9832d1b6fc920, type: 3}
+  asosiatedStringTag: 0

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac7314596e331454bafae06f151ca9e7, type: 3}
-  m_Name: PictureClue
+  m_Name: PictureClueMaid
   m_EditorClassIdentifier: 
-  clueName: Picture
-  clueType: 1
-  clueSprite: {fileID: 21300000, guid: 47185145d2e2793408dcaa9550d5366a, type: 3}
-  asosiatedStringTag: 3
+  clueName: Maid
+  clueType: 3
+  clueSprite: {fileID: 21300000, guid: fc945ac54677e2f44a637555ae5d59f3, type: 3}
+  asosiatedStringTag: 0

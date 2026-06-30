@@ -327,12 +327,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ff9115fad55a514cbdb8207574f6581, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a65df9e6936363447beccf021354d60c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 5.6266665, y: 7.5022225}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 7010000967236108963}
   - component: {fileID: 5053614824151901422}
   m_Layer: 0
-  m_Name: Gardener board clue
+  m_Name: Board clue prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
