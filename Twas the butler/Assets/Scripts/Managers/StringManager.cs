@@ -46,7 +46,7 @@ public class StringManager : MonoBehaviour
     {
         foreach(var redString in redStrings)
         {
-            if((redString.startNote == boardNoteA || redString.endNote == boardNoteA) && (redString.startNote == boardNoteB || redString.endNote == boardNoteB))
+            if((redString.startNote == boardNoteA.transform || redString.endNote == boardNoteA.transform) && (redString.startNote == boardNoteB.transform || redString.endNote == boardNoteB.transform))
                 { return true; }
         }
         return false;

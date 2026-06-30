@@ -99,7 +99,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 // Handle string connection logic here
                 Debug.Log("Dragging over a valid string target: " + targetNote.name);
 
-                GameObject stringObject = Instantiate(StringPrefab, transform.position, Quaternion.identity);
+                GameObject stringObject = Instantiate(StringPrefab, transform.position, Quaternion.identity, gameObject.transform);
                 RedString redString = stringObject.GetComponentInChildren<RedString>();
 
                 redString.SetClueData(clueData, targetNote.clueData);
