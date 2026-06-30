@@ -15,4 +15,4 @@ MonoBehaviour:
   clueName: Hat
   clueType: 1
   clueSprite: {fileID: 21300000, guid: aa5355694f479b14f8f9832d1b6fc920, type: 3}
-  asosiatedStringTag: 0
+  asosiatedStringTag: 4

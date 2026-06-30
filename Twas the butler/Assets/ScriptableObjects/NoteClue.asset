@@ -15,4 +15,4 @@ MonoBehaviour:
   clueName: Note
   clueType: 1
   clueSprite: {fileID: 21300000, guid: d89aa251d52036c4c8ef30e921c9f456, type: 3}
-  asosiatedStringTag: 0
+  asosiatedStringTag: 5
