@@ -9901,7 +9901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EventMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 4294967295
   m_MaxRayIntersections: 0
 --- !u!4 &117244121054945974
 Transform:
@@ -10644,7 +10644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03af583cc7b79d34eaf706d53bda56a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteboard: {fileID: 3727898852244533960}
+  whiteboard: {fileID: 7155774772260235119}
   inventoryUI: {fileID: 744940628}
   ammountOfYToMoveInventoryUI: 1095
   ammountOfYToMove: 2.5
@@ -11259,7 +11259,7 @@ Transform:
   m_GameObject: {fileID: 3395241571441046791}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: -0.04, z: 0.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22121,6 +22121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 5179876124043645974, guid: 0e186e75987e62041a7e73034d58d31b, type: 3}
+  xOffSet: -0.1
 --- !u!33 &8878775650890473285
 MeshFilter:
   m_ObjectHideFlags: 0

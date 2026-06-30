@@ -12,6 +12,8 @@ public class RedString : MonoBehaviour, IPointerClickHandler
     public GameObject label;
 
     public HashSet<GameObject> connectedObjects = new HashSet<GameObject>();
+    public Transform startNote;
+    public Transform endNote;
 
 
     public void SetClueData(ClueData clueDataA, ClueData clueDataB)
@@ -59,6 +61,9 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         //label.GetComponent<KeepScale>().ReturnScale();
         //label.transform.rotation = Quaternion.Euler(0, 0, 0);
         //Debug.Log("Reset rotation");
+
+        startNote = start.transform;
+        endNote = end.transform;
 
     }
 

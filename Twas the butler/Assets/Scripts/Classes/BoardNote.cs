@@ -94,7 +94,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             // Check if the hit object is a valid target for the string
             BoardNote targetNote = hit.collider.GetComponent<BoardNote>();
-            if (targetNote != null)
+            if (targetNote != null && targetNote != this && !StringManager.Instance.HasDuplicate(this, targetNote))
             {
                 // Handle string connection logic here
                 Debug.Log("Dragging over a valid string target: " + targetNote.name);

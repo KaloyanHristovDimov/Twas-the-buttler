@@ -48,6 +48,7 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         selectedObject.transform.localPosition = new Vector3(inspectDistance / 2, 0f, 0f);
 
         onStartInspection.Invoke();
+        copyOfSelectedObject.GetComponent<Clue>().HandleCopies(gameObject.GetComponent<Clue>());
     }
 
     public void OnDrag(PointerEventData eventData)
