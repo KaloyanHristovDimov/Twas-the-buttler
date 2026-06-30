@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class Board : MonoBehaviour
 {
     public GameObject notePrefab;
+    public float xOffSet = -0.1f;
 
     //UI version
     //public void OnDrop(PointerEventData eventData)
@@ -32,9 +33,9 @@ public class Board : MonoBehaviour
     {
         GameObject noteObject = Instantiate(
             notePrefab,
-            worldPosition,
+            new Vector3(worldPosition.x + xOffSet, worldPosition.y, worldPosition.z),
             Quaternion.identity,
-            transform);
+            transform.parent);
 
         noteObject.GetComponent<BoardNote>().SetClueData(clueData);
     }
