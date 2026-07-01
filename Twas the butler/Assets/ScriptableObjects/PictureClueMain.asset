@@ -15,4 +15,4 @@ MonoBehaviour:
   clueName: Family Photo
   clueType: 1
   clueSprite: {fileID: 21300000, guid: 47185145d2e2793408dcaa9550d5366a, type: 3}
-  asosiatedStringTag: 3
+  asosiatedStringTags: 03000000

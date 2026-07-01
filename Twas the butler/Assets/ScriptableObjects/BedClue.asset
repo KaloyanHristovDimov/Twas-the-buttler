@@ -15,4 +15,4 @@ MonoBehaviour:
   clueName: MurderWeapon
   clueType: 1
   clueSprite: {fileID: 21300000, guid: a65df9e6936363447beccf021354d60c, type: 3}
-  asosiatedStringTag: 1
+  asosiatedStringTags: 01000000
