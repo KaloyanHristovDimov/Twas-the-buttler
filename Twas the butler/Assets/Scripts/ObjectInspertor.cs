@@ -17,6 +17,8 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
 
     public UnityEvent onStartInspection;
 
+    private Clue originalClue;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -31,6 +33,7 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
 
     public void StartInspection(GameObject gameObject, float inspectDistance)
     {
+        originalClue = gameObject.GetComponentInChildren<Clue>();
         if (selectedObject != null) return;
         if (copyObject)
         {
@@ -80,6 +83,13 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
     {
         if (selectedObject == null) return;
         Debug.Log("Stopping inspection");
+        if (originalClue != null)
+        {
+            originalClue.enabled = true;
+            originalClue = null;
+        }
+        
+        
         if (copyObject)
         {
             Debug.Log("copy object");
@@ -95,5 +105,6 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         selectedObject.transform.position = originalObjectPosition;
         selectedObject.transform.rotation = originalObjectRotation;
         selectedObject = null;
+        
     }
 }

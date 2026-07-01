@@ -7,7 +7,7 @@ public class Clue : MonoBehaviour, IPointerClickHandler
     public List<ClueData> clueData;
     public bool destroyOnClick = false;
     public UnityEvent OnCluePickedUpEvent;
-    private GameObject originalClueGameObject;
+    private Clue originalClueGameObject;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -17,14 +17,19 @@ public class Clue : MonoBehaviour, IPointerClickHandler
         }
         OnCluePickedUpEvent.Invoke();
         PopupScript.Instance.StartPopupCoroutine(clueData);
-        if (originalClueGameObject != null) Destroy(originalClueGameObject);
+        if (originalClueGameObject != null)
+        {
+            originalClueGameObject.enabled = true;
+            Destroy(originalClueGameObject);
+        }
         if (destroyOnClick) Destroy(gameObject);
         else Destroy(GetComponent<Clue>());
     }
 
     public void HandleCopies(Clue originalClue)
     {
-        originalClueGameObject = originalClue.gameObject;
+        originalClueGameObject = originalClue;
+        originalClue.enabled = false;
         Debug.Log("GameObject Linked");
     }
 }
