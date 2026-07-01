@@ -9,6 +9,7 @@ public class SolutionCheck : MonoBehaviour
     public List<Solution> solutions;
     [SerializeField] private UnityEvent onAnswerCorrect;
     [SerializeField] private UnityEvent onAnswerInCorrect;
+    private int correctStrings = 0;
 
     public void CheckSolution()
     {
@@ -19,12 +20,17 @@ public class SolutionCheck : MonoBehaviour
                 
                 if (StringManager.Instance.HasString(solution.requiredClueA, solution.requiredClueB, solution.requiredStringTag))
                 {
-                    Debug.Log("Congratulations! You've solved the puzzle!");
-                    onAnswerCorrect.Invoke();
-                    return;
+                    correctStrings++;
                 }
             }
         }
-        onAnswerInCorrect.Invoke();
+        if (correctStrings == solutions.Count)
+        {
+            onAnswerCorrect.Invoke();
+        }
+        else
+        {
+            onAnswerInCorrect.Invoke();
+        }
     }
 }
