@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418c19fa9353ecc48a63f4c040f7f044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inspectDistance: 0
+  inspectDistance: 3
 --- !u!65 &72694022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2400,7 +2400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418c19fa9353ecc48a63f4c040f7f044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inspectDistance: 4
+  inspectDistance: 8
 --- !u!1 &553555266
 GameObject:
   m_ObjectHideFlags: 0
