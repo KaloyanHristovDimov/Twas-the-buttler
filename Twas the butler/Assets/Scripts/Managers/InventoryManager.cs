@@ -46,8 +46,26 @@ public class InventoryManager : MonoBehaviour
 
     public void AddTagToInventory(ClueData.StringTag stringTag)
     {
-        if (gameObject.GetComponentInChildren<Slot>().ParentHasOtherActiveImage()) 
+        GameObject canvas = GameObject.Find("Main Canvas");
+        string childName = "Push Witeboard Down";
+        Transform[] children = canvas.transform.GetComponentsInChildren<Transform>(true);
+        bool showTag = false;
+        foreach (Transform child in children)
+        {
+            Transform[] grandChildren = child.transform.GetComponentsInChildren<Transform>(true);
+            foreach (Transform grandChild in grandChildren)
+            {
+                if (grandChild.name == childName)
+                {
+                    showTag = child.gameObject.activeInHierarchy;
+                }
+            }
+        }
+        
+        if (showTag)
+        {
             Instantiate(tagSlotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>().gameObject.transform).GetComponent<TagSlot>().SetTag(stringTag);
+        }
         else 
         {
             GameObject tag = Instantiate(
@@ -57,8 +75,8 @@ public class InventoryManager : MonoBehaviour
 
             tag.GetComponent<TagSlot>().SetTag(stringTag);
 
-            if(tag.GetComponent<Image>() != null) tag.GetComponent<Image>().enabled = false;
-            if(tag.GetComponentInChildren<TextMeshProUGUI>() != null) tag.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+            if (tag.GetComponent<Image>() != null) tag.GetComponent<Image>().enabled = false;
+            if (tag.GetComponentInChildren<TextMeshProUGUI>() != null) tag.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
         }
     }
 

@@ -41,4 +41,14 @@ public class StringManager : MonoBehaviour
         }
         return false;
     }
+
+    public bool HasDuplicate(BoardNote boardNoteA, BoardNote boardNoteB)
+    {
+        foreach(var redString in redStrings)
+        {
+            if((redString.startNote == boardNoteA.transform || redString.endNote == boardNoteA.transform) && (redString.startNote == boardNoteB.transform || redString.endNote == boardNoteB.transform))
+                { return true; }
+        }
+        return false;
+    }
 }

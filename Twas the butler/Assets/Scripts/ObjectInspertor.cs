@@ -36,6 +36,8 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         {
             copyOfSelectedObject = Instantiate(gameObject);
             copyOfSelectedObject.name = "Copy of inspected object";
+            
+            
             selectedObject = copyOfSelectedObject;
         }
         else selectedObject = gameObject;
@@ -46,8 +48,15 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         if (copyObject) selectedObject.transform.localScale = new Vector3(objectScale.x * 50, objectScale.y * 50, objectScale.z * 50);
         else selectedObject.transform.localScale = new Vector3(objectScale.x / 2, objectScale.y / 2, objectScale.z / 2);
         selectedObject.transform.localPosition = new Vector3(inspectDistance / 2, 0f, 0f);
+        Clue copyClue = copyOfSelectedObject.GetComponentInChildren<Clue>();
+        if (copyClue != null)
+        {
+            copyClue.HandleCopies(gameObject.GetComponentInChildren<Clue>());
+        }
 
         onStartInspection.Invoke();
+
+
     }
 
     public void OnDrag(PointerEventData eventData)

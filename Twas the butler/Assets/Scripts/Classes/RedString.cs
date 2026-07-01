@@ -12,6 +12,8 @@ public class RedString : MonoBehaviour, IPointerClickHandler
     public GameObject label;
 
     public HashSet<GameObject> connectedObjects = new HashSet<GameObject>();
+    public Transform startNote;
+    public Transform endNote;
 
 
     public void SetClueData(ClueData clueDataA, ClueData clueDataB)
@@ -25,6 +27,7 @@ public class RedString : MonoBehaviour, IPointerClickHandler
     public void SetTag(ClueData.StringTag newTag)
     {
         stringTag = newTag;
+        label = gameObject.transform.parent.GetComponentInChildren<TextMeshPro>().gameObject;
         label.GetComponent<TextMeshPro>().text = stringTag.ToString();
         
     }
@@ -53,12 +56,15 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         scale.y = distance * 0.5f; // Default capsule height is 2 units
         transform.localScale = scale;
 
-        label = transform.parent.GetComponentInChildren<TMPro.TextMeshPro>().gameObject;
+        label = transform.parent.GetComponentInChildren<TMPro.TextMeshPro>().gameObject.transform.parent.gameObject;
         label.transform.position = (startPos + endPos) * 0.5f;
         label.transform.position += new Vector3(0, 0, -0.01f); // Offset above the string
         //label.GetComponent<KeepScale>().ReturnScale();
         //label.transform.rotation = Quaternion.Euler(0, 0, 0);
         //Debug.Log("Reset rotation");
+
+        startNote = start.transform;
+        endNote = end.transform;
 
     }
 
@@ -66,7 +72,10 @@ public class RedString : MonoBehaviour, IPointerClickHandler
     {
         if(ToolManager.Instance.currentTool == ToolManager.ToolType.StringDeleteTool)
         {
-            Destroy(gameObject);
+            StringManager.Instance.RemoveRedString(this);
+            InventoryManager.Instance.AddTagToInventory(stringTag);
+            Destroy(gameObject.transform.parent.gameObject);
+
         }
     }
 }
