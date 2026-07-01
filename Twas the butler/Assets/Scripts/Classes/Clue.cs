@@ -8,7 +8,6 @@ public class Clue : MonoBehaviour, IPointerClickHandler
     public bool destroyOnClick = false;
     public UnityEvent OnCluePickedUpEvent;
     private GameObject originalClueGameObject;
-    [SerializeField] private PopupScript popupScript;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -17,7 +16,7 @@ public class Clue : MonoBehaviour, IPointerClickHandler
             InventoryManager.Instance.AddClueToInventory(data);
         }
         OnCluePickedUpEvent.Invoke();
-        popupScript.StartPopupCoroutine(clueData);
+        PopupScript.Instance.StartPopupCoroutine(clueData);
         if (originalClueGameObject != null) Destroy(originalClueGameObject);
         if (destroyOnClick) Destroy(gameObject);
         else Destroy(GetComponent<Clue>());

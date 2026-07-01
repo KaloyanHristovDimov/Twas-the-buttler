@@ -32,11 +32,14 @@ public class StringManager : MonoBehaviour
 
     public bool HasString(ClueData clueA, ClueData clueB, ClueData.StringTag stringTag)
     {
-        foreach (var redString in redStrings)
+        foreach (var stringToCheck in redStrings)
         {
-            if (redString.clues.Contains(clueA) && redString.clues.Contains(clueB) && redString.stringTag == stringTag)
+            Debug.Log($"Checking string with tag {stringToCheck.stringTag} between clues: {stringToCheck.clues.Count}");
+            if (stringToCheck.clues.Contains(clueA) && stringToCheck.clues.Contains(clueB) && stringToCheck.stringTag == stringTag)
             {
+                Debug.Log($"Found string between {clueA.clueName} and {clueB.clueName} with tag {stringTag}");
                 return true;
+
             }
         }
         return false;
@@ -54,11 +57,12 @@ public class StringManager : MonoBehaviour
 
     public void UpdateString(BoardNote boardNote)
     {
-        foreach (var redString in redStrings)
+        foreach (var stringToUpdate in redStrings)
         {
-            if (redString.startNote == boardNote.transform || redString.endNote == boardNote.transform)
+            
+            if (stringToUpdate.startNote == boardNote.transform || stringToUpdate.endNote == boardNote.transform)
             {
-                redString.UpdateVisual();
+                stringToUpdate.UpdateVisual();
             }
         }
     }

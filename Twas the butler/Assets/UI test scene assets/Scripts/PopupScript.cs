@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class PopupScript : MonoBehaviour
 {
+    public static PopupScript Instance;
+
     [SerializeField] private GameObject spriteParent;
     [SerializeField] private GameObject tagParent;
     [SerializeField] private Image spriteLocation;
@@ -15,6 +17,18 @@ public class PopupScript : MonoBehaviour
     [SerializeField] private float popupTime = .5f;
     private bool buzy;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void PopupClues(List<ClueData> listOfClueData)
     {
