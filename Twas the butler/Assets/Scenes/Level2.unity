@@ -4573,7 +4573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1165463751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8430,6 +8430,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a056e27a49019244a8746993891e3c5, type: 2}
   - {fileID: 11400000, guid: 30d542b0580b4954d8aa104c6b8f6089, type: 2}
   - {fileID: 11400000, guid: d76f2632cda6f094bbca2157e7d373d9, type: 2}
+  - {fileID: 11400000, guid: 9f283f20ca041ef47a375bd49213015e, type: 2}
+  - {fileID: 11400000, guid: 4335d77b5f3ff60449e9d5def684f130, type: 2}
   onAnswerCorrect:
     m_PersistentCalls:
       m_Calls:
@@ -19823,7 +19825,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -22387,7 +22389,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 89806f08649245b4fa99fef600a6827b, type: 2}
   - {fileID: 11400000, guid: ff03d957c9af7ae4da651a2dd014f709, type: 2}
   - {fileID: 11400000, guid: dccb7ca8e14301b4cafd45cb00767bea, type: 2}
-  destroyOnClick: 1
+  destroyOnClick: 0
   OnCluePickedUpEvent:
     m_PersistentCalls:
       m_Calls: []

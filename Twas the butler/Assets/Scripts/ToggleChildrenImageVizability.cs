@@ -10,6 +10,7 @@ public class ToggleChildrenImageVizability : MonoBehaviour
 
     private void OnEnable()
     {
+        if (parent.transform == null) return;
         foreach (Transform child in parent.transform) 
         {
             if(child.GetComponent<Image>() != null) child.GetComponent<Image>().enabled = true;
@@ -19,6 +20,7 @@ public class ToggleChildrenImageVizability : MonoBehaviour
 
     private void OnDisable()
     {
+        if (parent.transform == null) return;
         foreach (Transform child in parent.transform)
         {
             if (child.GetComponent<Image>() != null) child.GetComponent<Image>().enabled = false;
