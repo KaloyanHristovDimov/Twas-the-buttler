@@ -36,8 +36,11 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         
     }
 
-    public void SetStartAndEndPoints(GameObject start, GameObject end)
+    public void InitializeTheString(GameObject start, GameObject end)
     {
+        StringManager.Instance.AddRedString(this);
+        SetClueData(start.GetComponent<BoardNote>().clueData, end.GetComponent<BoardNote>().clueData);
+
         // Set the start and end points of the string
         connectedObjects.Add(start.GetComponentInChildren<Transform>().gameObject);
         connectedObjects.Add(end.GetComponentInChildren<Transform>().gameObject);
@@ -63,9 +66,7 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         label = transform.parent.GetComponentInChildren<TMPro.TextMeshPro>().gameObject.transform.parent.gameObject;
         label.transform.position = (startPos + endPos) * 0.5f;
         label.transform.position += new Vector3(0, 0, -0.01f); // Offset above the string
-        label.transform.rotation = Quaternion.LookRotation(
-    Camera.main.transform.forward,
-    Camera.main.transform.up);
+        label.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
 
         startNote = start.transform;
         endNote = end.transform;
@@ -110,9 +111,7 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         {
             label.transform.position = (startPos + endPos) * 0.5f;
             label.transform.position += new Vector3(0, 0, -0.1f); // Offset above the string
-            //label.GetComponent<KeepScale>().ReturnScale();
-            //label.transform.rotation = Quaternion.Euler(0, 0, 0);
-            //Debug.Log("Reset rotation");
+            label.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
         }
     }
 }
