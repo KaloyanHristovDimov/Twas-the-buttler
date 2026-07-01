@@ -8937,10 +8937,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081fbbfbcfa4d6b4992e6a20e4ac2918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solutions: []
+  solutions:
+  - {fileID: 11400000, guid: ddd7b79c4e84c2444b78b13849890045, type: 2}
+  - {fileID: 11400000, guid: 1d9d54408d208244897ae2f18682ee1f, type: 2}
+  - {fileID: 11400000, guid: 3a056e27a49019244a8746993891e3c5, type: 2}
+  - {fileID: 11400000, guid: 30d542b0580b4954d8aa104c6b8f6089, type: 2}
+  - {fileID: 11400000, guid: d76f2632cda6f094bbca2157e7d373d9, type: 2}
   onAnswerCorrect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1148313341}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
   onAnswerInCorrect:
     m_PersistentCalls:
       m_Calls: []
@@ -9958,7 +9975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back to Settings
+  m_text: Back to Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b9c76da862922e4ca403b56020bef44, type: 2}
   m_sharedMaterial: {fileID: 7699182605798568533, guid: 4b9c76da862922e4ca403b56020bef44, type: 2}

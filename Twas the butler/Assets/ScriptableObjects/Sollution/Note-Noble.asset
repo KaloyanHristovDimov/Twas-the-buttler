@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac7314596e331454bafae06f151ca9e7, type: 3}
-  m_Name: PictureClueMaid
+  m_Script: {fileID: 11500000, guid: 3502230b08145f94e8d6d924deafa490, type: 3}
+  m_Name: Note-Noble
   m_EditorClassIdentifier: 
-  clueName: Maid
-  clueType: 3
-  clueSprite: {fileID: 21300000, guid: fc945ac54677e2f44a637555ae5d59f3, type: 3}
-  asosiatedStringTag: 6
+  requiredClueA: {fileID: 11400000, guid: 2ba4fcafeda5fbb4dab5b9415acea282, type: 2}
+  requiredClueB: {fileID: 11400000, guid: 42b3eb049e42ed342814aaf905ce57a9, type: 2}
+  requiredStringTag: 5
