@@ -62,10 +62,10 @@ public class RedString : MonoBehaviour, IPointerClickHandler
 
         label = transform.parent.GetComponentInChildren<TMPro.TextMeshPro>().gameObject.transform.parent.gameObject;
         label.transform.position = (startPos + endPos) * 0.5f;
-        label.transform.position += new Vector3(0, 0, -0.1f); // Offset above the string
-        //label.GetComponent<KeepScale>().ReturnScale();
-        //label.transform.rotation = Quaternion.Euler(0, 0, 0);
-        //Debug.Log("Reset rotation");
+        label.transform.position += new Vector3(0, 0, -0.01f); // Offset above the string
+        label.transform.rotation = Quaternion.LookRotation(
+    Camera.main.transform.forward,
+    Camera.main.transform.up);
 
         startNote = start.transform;
         endNote = end.transform;
