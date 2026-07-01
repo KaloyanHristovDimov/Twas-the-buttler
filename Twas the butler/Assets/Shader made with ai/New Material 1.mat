@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material 1
-  m_Shader: {fileID: 4800000, guid: dc82015767e2abb49a0f1d4728251c64, type: 3}
+  m_Shader: {fileID: 4800000, guid: f71475ea910f26941b2aeac42574a51c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -95,7 +95,7 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DebugView: 0
-    - _DepthThreshold: 0.173
+    - _DepthThreshold: 0.441
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -105,9 +105,9 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NormalThreshold: 0.066
+    - _NormalThreshold: 0.128
     - _OcclusionStrength: 1
-    - _OutlineThickness: 2.66
+    - _OutlineThickness: 2.58
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1

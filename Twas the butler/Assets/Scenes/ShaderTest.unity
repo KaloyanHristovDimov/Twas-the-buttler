@@ -2581,7 +2581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueData: {fileID: 11400000, guid: 42b3eb049e42ed342814aaf905ce57a9, type: 2}
+  clueData:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   destroyOnClick: 1
   OnCluePickedUpEvent:
     m_PersistentCalls:
@@ -5469,7 +5472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueData: {fileID: 11400000, guid: f5f669fdd028b0541992a02dc6674cee, type: 2}
+  clueData:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   destroyOnClick: 0
   OnCluePickedUpEvent:
     m_PersistentCalls:
@@ -14166,7 +14172,7 @@ GameObject:
   - component: {fileID: 9163312688232786072}
   - component: {fileID: 3829349119965681399}
   - component: {fileID: 6456644900515868907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: living_room_seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22147,7 +22153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 5179876124043645974, guid: 0e186e75987e62041a7e73034d58d31b, type: 3}
-  xOffSet: -0.1
+  xOffset: -0.1
+  cluesToAddOnStart: []
 --- !u!33 &8878775650890473285
 MeshFilter:
   m_ObjectHideFlags: 0
