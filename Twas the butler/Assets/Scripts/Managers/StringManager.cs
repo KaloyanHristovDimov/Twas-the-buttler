@@ -51,4 +51,15 @@ public class StringManager : MonoBehaviour
         }
         return false;
     }
+
+    public void UpdateString(BoardNote boardNote)
+    {
+        foreach (var redString in redStrings)
+        {
+            if (redString.startNote == boardNote.transform || redString.endNote == boardNote.transform)
+            {
+                redString.UpdateVisual();
+            }
+        }
+    }
 }

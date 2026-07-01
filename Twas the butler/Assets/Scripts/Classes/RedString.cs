@@ -85,4 +85,34 @@ public class RedString : MonoBehaviour, IPointerClickHandler
 
         }
     }
+
+    public void UpdateVisual()
+    {
+        if (startNote == null || endNote == null)
+        {
+            Debug.LogWarning("Start or End note is null. Cannot update visual.");
+            return;
+        }
+        Vector3 startPos = startNote.position;
+        Vector3 endPos = endNote.position;
+        // Place in the middle
+        transform.position = (startPos + endPos) * 0.5f;
+        // Direction from start to end
+        Vector3 direction = endPos - startPos;
+        // Rotate so the capsule's Y axis points along the direction
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
+        // Stretch along Y (capsule height)
+        float distance = direction.magnitude;
+        Vector3 scale = transform.localScale;
+        scale.y = distance * 0.5f; // Default capsule height is 2 units
+        transform.localScale = scale;
+        if (label != null)
+        {
+            label.transform.position = (startPos + endPos) * 0.5f;
+            label.transform.position += new Vector3(0, 0, -0.1f); // Offset above the string
+            //label.GetComponent<KeepScale>().ReturnScale();
+            //label.transform.rotation = Quaternion.Euler(0, 0, 0);
+            //Debug.Log("Reset rotation");
+        }
+    }
 }

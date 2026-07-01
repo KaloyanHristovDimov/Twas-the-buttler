@@ -220,6 +220,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 Debug.Log("Moved note back to slot: " + slot.name);
             }
         }
+        StringManager.Instance.UpdateString(this);
     }
 
     
