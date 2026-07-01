@@ -65,7 +65,7 @@ public class RedString : MonoBehaviour, IPointerClickHandler
 
         label = transform.parent.GetComponentInChildren<TMPro.TextMeshPro>().gameObject.transform.parent.gameObject;
         label.transform.position = (startPos + endPos) * 0.5f;
-        label.transform.position += new Vector3(0, 0, -0.01f); // Offset above the string
+        label.transform.position -= Camera.main.transform.forward * 0.03f; // Offset above the string
         label.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
 
         startNote = start.transform;
@@ -110,7 +110,7 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         if (label != null)
         {
             label.transform.position = (startPos + endPos) * 0.5f;
-            label.transform.position += new Vector3(0, 0, -0.1f); // Offset above the string
+            label.transform.position -= Camera.main.transform.forward * 0.03f; // Offset above the string
             label.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
         }
     }
