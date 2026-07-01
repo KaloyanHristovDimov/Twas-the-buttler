@@ -14,15 +14,11 @@ public class SolutionCheck : MonoBehaviour
     public void CheckSolution()
     {
         foreach (var solution in solutions)
-        {
-            if (solution.requiredClueA != null && solution.requiredClueB != null)
-            {
-                
+        {       
                 if (StringManager.Instance.HasString(solution.requiredClueA, solution.requiredClueB, solution.requiredStringTag))
                 {
                     correctStrings++;
                 }
-            }
         }
         if (correctStrings == solutions.Count)
         {
@@ -32,5 +28,7 @@ public class SolutionCheck : MonoBehaviour
         {
             onAnswerInCorrect.Invoke();
         }
+        Debug.Log($"Correct Strings: {correctStrings} / {solutions.Count}");
+        correctStrings = 0;
     }
 }

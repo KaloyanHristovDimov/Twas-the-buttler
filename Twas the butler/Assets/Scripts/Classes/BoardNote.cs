@@ -103,7 +103,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
                 GameObject stringObject = Instantiate(StringPrefab, transform.position, Quaternion.identity, gameObject.transform.parent.transform);
                 RedString redString = stringObject.GetComponentInChildren<RedString>();
-                redString.SetStartAndEndPoints(this.gameObject, targetNote.gameObject);
+                redString.InitializeTheString(this.gameObject, targetNote.gameObject);
 
                 //GameObject rotationObject = gameObject.transform.parent.transform.parent.gameObject;
                 //Transform[] children = stringObject.GetComponentsInChildren<Transform>();
