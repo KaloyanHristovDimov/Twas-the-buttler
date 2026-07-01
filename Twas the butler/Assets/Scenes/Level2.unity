@@ -2086,7 +2086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueData: []
+  clueData:
+  - {fileID: 11400000, guid: 13302669f8b27a04aa3e081af3554f7d, type: 2}
   destroyOnClick: 1
   OnCluePickedUpEvent:
     m_PersistentCalls:
@@ -2836,9 +2837,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657621333}
-  - component: {fileID: 657621334}
-  - component: {fileID: 657621335}
-  - component: {fileID: 657621336}
   m_Layer: 0
   m_Name: PictureCluePivotPoint
   m_TagString: Untagged
@@ -2859,63 +2857,9 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1279311221}
-  - {fileID: 2145315627}
-  - {fileID: 1252771780}
   - {fileID: 6705920335915175079}
   m_Father: {fileID: 543450652857634641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &657621334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657621332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueData: []
-  destroyOnClick: 0
-  OnCluePickedUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &657621335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657621332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueData: []
-  destroyOnClick: 0
-  OnCluePickedUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &657621336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657621332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueData: []
-  destroyOnClick: 0
-  OnCluePickedUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &686715023
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,7 +5869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueData: []
+  clueData:
+  - {fileID: 11400000, guid: f5f669fdd028b0541992a02dc6674cee, type: 2}
   destroyOnClick: 1
   OnCluePickedUpEvent:
     m_PersistentCalls:
@@ -6005,77 +5950,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248068763}
   m_CullTransparentMesh: 1
---- !u!1 &1252771779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1252771780}
-  - component: {fileID: 1252771781}
-  - component: {fileID: 1252771782}
-  m_Layer: 0
-  m_Name: PictureCluePivotPoint (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1252771780
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252771779}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 657621333}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1252771781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252771779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueData: []
-  destroyOnClick: 1
-  OnCluePickedUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!135 &1252771782
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252771779}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1259146602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6288,77 +6162,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275720371}
   m_CullTransparentMesh: 1
---- !u!1 &1279311220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1279311221}
-  - component: {fileID: 1279311222}
-  - component: {fileID: 1279311223}
-  m_Layer: 0
-  m_Name: PictureCluePivotPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1279311221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279311220}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 657621333}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1279311222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279311220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueData: []
-  destroyOnClick: 1
-  OnCluePickedUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!135 &1279311223
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279311220}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1298283368
 GameObject:
   m_ObjectHideFlags: 0
@@ -8317,12 +8120,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2079988148}
   - {fileID: 1165463751}
   - {fileID: 627631994}
   - {fileID: 6302655684612660615}
   - {fileID: 1642384730}
   - {fileID: 267931689}
-  - {fileID: 2079988148}
   m_Father: {fileID: 351811390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10221,7 +10024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2079988148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10287,7 +10090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueData: []
+  clueData:
+  - {fileID: 11400000, guid: 2ba4fcafeda5fbb4dab5b9415acea282, type: 2}
   destroyOnClick: 1
   OnCluePickedUpEvent:
     m_PersistentCalls:
@@ -10520,77 +10324,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &2145315626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2145315627}
-  - component: {fileID: 2145315628}
-  - component: {fileID: 2145315629}
-  m_Layer: 0
-  m_Name: PictureCluePivotPoint (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2145315627
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145315626}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 657621333}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2145315628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145315626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueData: []
-  destroyOnClick: 1
-  OnCluePickedUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!135 &2145315629
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145315626}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &33223013846294637
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23359,6 +23092,7 @@ GameObject:
   - component: {fileID: 2563194117187929330}
   - component: {fileID: 2676314754546927802}
   - component: {fileID: 9145364850835365853}
+  - component: {fileID: 9145364850835365854}
   m_Layer: 4
   m_Name: PictureClue
   m_TagString: Untagged
@@ -23379,6 +23113,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inspectDistance: 1.5
+--- !u!114 &9145364850835365854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145364850835365852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875ee97812b620d45af9a9d0bb3defb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clueData:
+  - {fileID: 11400000, guid: 89806f08649245b4fa99fef600a6827b, type: 2}
+  - {fileID: 11400000, guid: ff03d957c9af7ae4da651a2dd014f709, type: 2}
+  - {fileID: 11400000, guid: dccb7ca8e14301b4cafd45cb00767bea, type: 2}
+  destroyOnClick: 1
+  OnCluePickedUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &9152925754422980501
 MeshRenderer:
   m_ObjectHideFlags: 0
