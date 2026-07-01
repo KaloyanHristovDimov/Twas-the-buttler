@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 public class Clue : MonoBehaviour, IPointerClickHandler
 {
-    public ClueData clueData;
+    public List<ClueData> clueData;
     public bool destroyOnClick = false;
     public UnityEvent OnCluePickedUpEvent;
     private GameObject originalClueGameObject;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        InventoryManager.Instance.AddClueToInventory(clueData);
+        foreach (ClueData data in clueData)
+        {
+            InventoryManager.Instance.AddClueToInventory(data);
+        }
         OnCluePickedUpEvent.Invoke();
         if (originalClueGameObject != null) Destroy(originalClueGameObject);
         if (destroyOnClick) Destroy(gameObject);
