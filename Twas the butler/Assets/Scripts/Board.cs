@@ -57,6 +57,9 @@ public class Board : MonoBehaviour
             case 0:
                 newPosition = new Vector3(worldPosition.x, worldPosition.y, worldPosition.z + xOffset);
                 break;
+            default:
+                newPosition = new Vector3(worldPosition.x, worldPosition.y, worldPosition.z + xOffset);
+                break;
         }
 
         GameObject noteObject = Instantiate(
