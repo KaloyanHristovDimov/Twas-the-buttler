@@ -48,9 +48,9 @@ public class ObjectInspector : MonoBehaviour, IDragHandler
         originalObjectRotation = selectedObject.transform.rotation;
         selectedObject.transform.SetParent(transform);
         Vector3 objectScale = selectedObject.transform.localScale;
-        if (copyObject) selectedObject.transform.localScale = new Vector3(objectScale.x * 50, objectScale.y * 50, objectScale.z * 50);
-        else selectedObject.transform.localScale = new Vector3(objectScale.x / 2, objectScale.y / 2, objectScale.z / 2);
-        selectedObject.transform.localPosition = new Vector3(inspectDistance / 2, 0f, 0f);
+        if (copyObject) selectedObject.transform.localScale = new Vector3(objectScale.x * 10, objectScale.y * 10, objectScale.z * 10);
+        else selectedObject.transform.localScale = new Vector3(objectScale.x / 10, objectScale.y / 10, objectScale.z / 10);
+        selectedObject.transform.localPosition = new Vector3(inspectDistance / 10, 0f, 0f);
         Clue copyClue = copyOfSelectedObject.GetComponentInChildren<Clue>();
         if (copyClue != null)
         {
