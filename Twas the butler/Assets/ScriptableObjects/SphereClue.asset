@@ -15,4 +15,4 @@ MonoBehaviour:
   clueName: DeadSon
   clueType: 3
   clueSprite: {fileID: 21300000, guid: f4ca6222ed957874a80c9f304e28b677, type: 3}
-  asosiatedStringTag: 2
+  asosiatedStringTags: 02000000
