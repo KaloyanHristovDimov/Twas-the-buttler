@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "New Clue Data", menuName = "Clue Data")]
 public class ClueData : ScriptableObject
@@ -8,5 +9,5 @@ public class ClueData : ScriptableObject
     public ClueType clueType;
     public Sprite clueSprite;
     public enum StringTag { None, Used, Killed, Family, Wore, Recieved, Harrased, Gave, About }
-    public StringTag asosiatedStringTag;
+    public List<StringTag> asosiatedStringTags;
 }
