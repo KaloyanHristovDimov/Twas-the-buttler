@@ -2,11 +2,13 @@ using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
-    public Slot[] inventorySlots;
+    public List<Slot> inventorySlots;
+    public List<TagSlot> tagSlots;
     public GameObject slotPrefab;
     public GameObject tagSlotPrefab;
 
@@ -22,7 +24,14 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        inventorySlots = GetComponentsInChildren<Slot>();
+        foreach (Transform child in transform)
+        {
+            Slot slot = child.GetComponent<Slot>();
+            if (slot != null)
+            {
+                inventorySlots.Add(slot);
+            }
+        }
     }
 
     public void AddClueToInventory(ClueData clueData)
@@ -36,8 +45,11 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-        
-        Instantiate(slotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>(true).gameObject.transform).GetComponent<Slot>().SetClueData(clueData);
+
+        GameObject newSlotObj = Instantiate(slotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>(true).gameObject.transform);
+        Slot newSlot = newSlotObj.GetComponent<Slot>();
+        newSlot.SetClueData(clueData);
+        inventorySlots.Add(newSlot);
         if (clueData.asosiatedStringTags != null)
         {
             foreach (var tag in clueData.asosiatedStringTags)
@@ -67,7 +79,10 @@ public class InventoryManager : MonoBehaviour
         
         if (showTag)
         {
-            Instantiate(tagSlotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>().gameObject.transform).GetComponent<TagSlot>().SetTag(stringTag);
+            GameObject tag = Instantiate(tagSlotPrefab, gameObject.GetComponentInChildren<VerticalLayoutGroup>().gameObject.transform);
+            TagSlot tagSlot = tag.GetComponent<TagSlot>();
+            tagSlot.SetTag(stringTag);
+            tagSlots.Add(tagSlot);
         }
         else 
         {
@@ -76,7 +91,9 @@ public class InventoryManager : MonoBehaviour
                                 gameObject.GetComponentInChildren<VerticalLayoutGroup>().transform
                                 );
 
-            tag.GetComponent<TagSlot>().SetTag(stringTag);
+            TagSlot tagSlot = tag.GetComponent<TagSlot>();
+            tagSlot.SetTag(stringTag);
+            tagSlots.Add(tagSlot);
 
             if (tag.GetComponent<Image>() != null) tag.GetComponent<Image>().enabled = false;
             if (tag.GetComponentInChildren<TextMeshProUGUI>() != null) tag.GetComponentInChildren<TextMeshProUGUI>().enabled = false;

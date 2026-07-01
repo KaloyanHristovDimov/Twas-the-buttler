@@ -55,6 +55,7 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             {
                 Destroy(dragVisual);
             }
+            InventoryManager.Instance.inventorySlots.Remove(this);
             Destroy(gameObject);
         }
     }

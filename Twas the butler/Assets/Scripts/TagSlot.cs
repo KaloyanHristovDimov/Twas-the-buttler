@@ -75,7 +75,9 @@ public class TagSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             {
                 redString.SetTag(stringTag);
 
+                InventoryManager.Instance.tagSlots.Remove(this);
                 Destroy(gameObject);
+                
             }
         }
     }

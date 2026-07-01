@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,19 +11,19 @@ public class ToggleChildrenImageVizability : MonoBehaviour
 
     private void OnEnable()
     {
-        if (parent.transform == null) return;
-        foreach (Transform child in parent.transform) 
+        foreach (Slot slot in InventoryManager.Instance.inventorySlots) 
         {
-            if(child.GetComponent<Image>() != null) child.GetComponent<Image>().enabled = true;
+            Transform child = slot.transform;
+            if (child.GetComponent<Image>() != null) child.GetComponent<Image>().enabled = true;
             if (child.GetComponentInChildren<TextMeshProUGUI>() != null) child.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
     }
 
     private void OnDisable()
     {
-        if (parent.transform == null) return;
-        foreach (Transform child in parent.transform)
+        foreach (Slot slot in InventoryManager.Instance.inventorySlots)
         {
+            Transform child = slot.transform;
             if (child.GetComponent<Image>() != null) child.GetComponent<Image>().enabled = false;
             if (child.GetComponentInChildren<TextMeshProUGUI>() != null) child.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
         }
