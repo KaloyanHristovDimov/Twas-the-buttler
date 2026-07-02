@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 public class InspectableObject : MonoBehaviour, IPointerClickHandler
 {
 
-    [Header("This gameobject needs to be on the water layer to work")]
     [SerializeField] private float inspectDistance = 0f;
 
     public void OnPointerClick(PointerEventData eventData)

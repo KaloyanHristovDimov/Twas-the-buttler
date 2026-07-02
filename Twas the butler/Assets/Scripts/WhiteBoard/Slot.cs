@@ -3,8 +3,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("This is the UI Representation of a clue")]
+
     public int slotIndex;
     public ClueData clueData;
 

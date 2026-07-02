@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65533c272dfcf054691c17408835c52c, type: 3}
+  m_Name: HowToMakeMorePuzzles
+  m_EditorClassIdentifier: 
+  documentation: "1)Create a scriptable object clue data for any clues you plan to
+    use.  Asign a 2d sprite to represent it on board, and choose hovewer many tags
+    you want the player to recive when picking it up\n\n2)Chose 3d objects to serve
+    as clues to find, add a clue script to them, put any number of clueData that
+    this object represents.\n\nOptonaly: add aditional objects to be inspectablt
+    by adding an InspectableObject script\n\nNote that both sripts require a collider
+    and will refuse to be added to objects without one to prevent erorrs\n\n3)Create
+    as many solution scripatble objects as the amount of specific connections you
+    want to have, for each one assign two clue data files to represent the clues
+    and chosse a tag that needs to connect them. \n\nThten depending on the goal
+    of the puzzle either put all the solutions in a list on the default solution
+    checher in the scene if you want solving the puzzle to end the level or create
+    another solution checher objet using the namesake script and assign the desired
+    effect to its on SolutionCorrect event"

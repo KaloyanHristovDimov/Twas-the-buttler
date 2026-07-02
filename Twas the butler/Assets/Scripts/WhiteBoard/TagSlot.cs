@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class TagSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    [Header("This is the UI Representation of a tag in players possession")]
     public ClueData.StringTag stringTag;
 
     public TMPro.TextMeshProUGUI textMesh;

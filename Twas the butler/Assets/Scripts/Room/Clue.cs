@@ -2,9 +2,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+
+[RequireComponent(typeof(Collider))]
 public class Clue : MonoBehaviour, IPointerClickHandler
 {
+    
     public List<ClueData> clueData;
+    [Header("If true, the clue will be destroyed after being clicked, if not it still stops being interactable")]
     public bool destroyOnClick = false;
     public UnityEvent OnCluePickedUpEvent;
     private Clue originalClueGameObject;
