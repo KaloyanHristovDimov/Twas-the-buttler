@@ -19213,6 +19213,7 @@ GameObject:
   - component: {fileID: 7009104903385691528}
   - component: {fileID: 644772215675369283}
   - component: {fileID: 8858982413094356668}
+  - component: {fileID: 8858982413094356669}
   m_Layer: 0
   m_Name: Whiteboard
   m_TagString: WhiteBoard
@@ -26791,6 +26792,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8858982413094356669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3727898852244533960}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0, y: 1.0000001, z: 1.5645207}
+  m_Center: {x: 0.4999972, y: 0.00000023777461, z: 0.0220167}
 --- !u!33 &8878775650890473285
 MeshFilter:
   m_ObjectHideFlags: 0
