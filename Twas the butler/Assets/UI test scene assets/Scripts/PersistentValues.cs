@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,7 +11,16 @@ public class PersistentValues : MonoBehaviour
     [Header("Stored Values")]
     [SerializeField] public List<bool> levelAvailable = new();
 
+    [SerializeField] public List<float> levelTimes = new();
+
     [SerializeField] public UnityEvent OnValuesChanged = new();
+
+    [SerializeField] public float timerlength = 7.5f;
+
+    public int lastLevelPlayed = 0;
+
+
+
 
     private void Awake()
     {
@@ -33,7 +43,6 @@ public class PersistentValues : MonoBehaviour
             return;
 
         levelAvailable[index] = value;
-        OnValuesChanged.Invoke();
     }
 
     public bool GetBool(int index)
