@@ -43,7 +43,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             case ToolManager.ToolType.RedStringTool:
                 // Handle red string dragging logic here
                 Debug.Log("Started dragging note for red string: " + clueData.clueName);
-                AudioManager.Instance.DragStart();
+                //AudioManager.Instance.DragStart();
                 break;
             default:
                 Debug.Log("Started dragging note with no tool: " + clueData.clueName);
@@ -62,7 +62,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 break;
             case ToolManager.ToolType.RedStringTool:
                 HandleRedStringConnection(eventData);
-                AudioManager.Instance.DragEnd();
+                //AudioManager.Instance.DragEnd();
                 break;
             default:
                 Debug.Log("No tool selected, dropping note: " + clueData.clueName);
@@ -205,7 +205,7 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                         break;
                 }
                 transform.position = newPosition;
-                AudioManager.Instance.ClueDown();
+                //AudioManager.Instance.ClueDown();
                 Debug.Log("Moved note to new position: " + worldPosition);
             }
         }

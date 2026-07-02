@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueName: Family Photo
   clueType: 1
-  clueSprite: {fileID: 21300000, guid: 47185145d2e2793408dcaa9550d5366a, type: 3}
+  clueSprite: {fileID: 21300000, guid: 3388b00608e509d45ae317c393f59b87, type: 3}
   asosiatedStringTags: 03000000
