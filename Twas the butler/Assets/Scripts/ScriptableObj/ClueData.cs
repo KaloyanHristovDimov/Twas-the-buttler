@@ -5,8 +5,7 @@ using System.Collections.Generic;
 public class ClueData : ScriptableObject
 {
     public string clueName;
-    public enum ClueType { Note, Object, Location, Person }
-    public ClueType clueType;
+    [Header("Visual for inventory and note")]
     public Sprite clueSprite;
     public enum StringTag { None, Used, Killed, Family, Wore, Recieved, Harrased, Gave, About }
     public List<StringTag> asosiatedStringTags;

@@ -34,6 +34,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adds a clue to the inventory by finding the first empty slot and setting its ClueData. 
+    /// It instantiates a new slot prefab and adds it to the inventory.
+    /// Additionally, if the clue has associated string tags, it adds those tags to the inventory as well.
+    /// </summary>
+    /// <param name="clueData"></param>
     public void AddClueToInventory(ClueData clueData)
     {
         foreach (Slot slot in inventorySlots)
@@ -59,6 +65,10 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adds the specified string tag to the inventory UI, creating a new tag slot for it.
+    /// </summary>
+    /// <param name="stringTag">The string tag to add to the inventory. Represents the tag data to be displayed or stored.</param>
     public void AddTagToInventory(ClueData.StringTag stringTag)
     {
         GameObject canvas = GameObject.Find("Main Canvas");

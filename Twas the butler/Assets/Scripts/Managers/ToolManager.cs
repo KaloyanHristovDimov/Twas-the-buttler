@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class ToolManager : MonoBehaviour
 {
+    /// <summary>
+    /// Defines how the player can interact with notes and strings in the game.
+    /// </summary>
     public enum ToolType
     {
         None,
         ClueMovingTool,
         RedStringTool,
-        StringTagTool,
         StringDeleteTool
     }
     public static ToolManager Instance { get; private set; }
+
 
     public ToolType currentTool = ToolType.None;
 
@@ -37,9 +40,6 @@ public class ToolManager : MonoBehaviour
             case ToolType.RedStringTool:
                 currentTool = ToolType.RedStringTool;
                 break;
-            case ToolType.StringTagTool:
-                currentTool = ToolType.StringTagTool;
-                break;
             case ToolType.StringDeleteTool:
                 currentTool = ToolType.StringDeleteTool;
                 break;
@@ -47,23 +47,6 @@ public class ToolManager : MonoBehaviour
                 currentTool = ToolType.None;
                 break;
         }
-    }
-
-    public void SetToolClueMove()
-    {
-        SetCurrentTool(ToolType.ClueMovingTool);
-    }
-    public void SetToolRedString()
-    {
-        SetCurrentTool(ToolType.RedStringTool);
-    }
-    public void SetToolStringTag()
-    {
-        SetCurrentTool(ToolType.StringTagTool);
-    }
-    public void SetToolStringDelete()
-    {
-        SetCurrentTool(ToolType.StringDeleteTool);
     }
     
 }

@@ -13,6 +13,11 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     //public GameObject stringDragVisualPrefab;
     public GameObject StringPrefab;
 
+
+    /// <summary>
+    /// Sets the clue data to be displayed by this component.
+    /// </summary>
+    /// <param name="data">The clue data to associate with this component. Cannot be null.</param>
     public void SetClueData(ClueData data)
     {
         clueData = data;
@@ -108,69 +113,6 @@ public class BoardNote : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 RedString redString = stringObject.GetComponentInChildren<RedString>();
                 redString.InitializeTheString(this.gameObject, targetNote.gameObject);
 
-                //GameObject rotationObject = gameObject.transform.parent.transform.parent.gameObject;
-                //Transform[] children = stringObject.GetComponentsInChildren<Transform>();
-                //foreach (Transform child in children) 
-                //{
-                //    Transform[] grandChildren = child.GetComponentsInChildren<Transform>();
-                //    foreach (Transform grandChild in grandChildren) 
-                //    {
-                //        if (grandChild.GetComponent<BoxCollider>() != null || grandChild.GetComponent<TextMeshPro>() != null)
-                //        {
-                //            switch (rotationObject.transform.rotation.eulerAngles.y)
-                //            {
-                //                case 90:
-                //                    if (grandChild.GetComponent<BoxCollider>() != null)
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x + 0.02f, grandChild.position.y, grandChild.position.z);
-                //                        grandChild.eulerAngles = new Vector3(0f, 90f, 0f);
-                //                    }
-                //                    else
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x + 0.01f, grandChild.position.y, grandChild.position.z);
-                //                        grandChild.eulerAngles = new Vector3(0f, 90f, 0f);
-                //                    }
-                //                    break;
-                //                case 180:
-                //                    if (grandChild.GetComponent<BoxCollider>() != null)
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z - 0.02f);
-                //                        grandChild.eulerAngles = new Vector3(0f, 180f, 0f);
-                //                    }
-                //                    else
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z - 0.01f);
-                //                        grandChild.eulerAngles = new Vector3(0f, 180f, 0f);
-                //                    }
-                //                    break;
-                //                case 270:
-                //                    if (grandChild.GetComponent<BoxCollider>() != null)
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x - 0.02f, grandChild.position.y, grandChild.position.z);
-                //                        grandChild.eulerAngles = new Vector3(0f, 270, 0f);
-                //                    }
-                //                    else
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x - 0.01f, grandChild.position.y, grandChild.position.z);
-                //                        grandChild.eulerAngles = new Vector3(0f, 270, 0f);
-                //                    }
-                //                    break;
-                //                case 0:
-                //                    if (grandChild.GetComponent<BoxCollider>() != null)
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z + 0.02f);
-                //                        grandChild.eulerAngles = new Vector3(0f, 0f, 0f);
-                //                    }
-                //                    else
-                //                    {
-                //                        grandChild.position = new Vector3(grandChild.position.x, grandChild.position.y, grandChild.position.z + 0.01f);
-                //                        grandChild.eulerAngles = new Vector3(0f, 0f, 0f);
-                //                    }
-                //                    break;
-                //            }
-                //        }
-                //    }
-                //}
             }
         }
     }

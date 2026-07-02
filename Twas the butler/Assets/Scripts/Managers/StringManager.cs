@@ -20,11 +20,18 @@ public class StringManager : MonoBehaviour
         }
     }   
 
-
+    /// <summary>
+    /// Adds the specified RedString to the collection.
+    /// </summary>
+    /// <param name="redString">The RedString instance to add to the collection. Cannot be null.</param>
     public void AddRedString(RedString redString)
     {
         redStrings.Add(redString);
     }
+    /// <summary>
+    /// Removes the specified RedString instance from the collection.
+    /// </summary>
+    /// <param name="redString">The RedString instance to remove from the collection. Cannot be null.</param>
     public void RemoveRedString(RedString redString)
     {
         redStrings.Remove(redString);
