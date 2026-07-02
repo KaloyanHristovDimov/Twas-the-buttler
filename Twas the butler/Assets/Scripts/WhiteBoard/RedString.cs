@@ -41,22 +41,22 @@ public class RedString : MonoBehaviour, IPointerClickHandler
         StringManager.Instance.AddRedString(this);
         SetClueData(start.GetComponent<BoardNote>().clueData, end.GetComponent<BoardNote>().clueData);
 
-        // Set the start and end points of the string
+        //set the start and end points of the string
         connectedObjects.Add(start.GetComponentInChildren<Transform>().gameObject);
         connectedObjects.Add(end.GetComponentInChildren<Transform>().gameObject);
         Vector3 startPos = start.transform.GetChild(0).position;
         Vector3 endPos = end.transform.GetChild(0).position;
 
-        // Place in the middle
+        //place in the middle
         transform.position = (startPos + endPos) * 0.5f;
 
-        // Direction from start to end
+        //direction from start to end
         Vector3 direction = endPos - startPos;
 
-        // Rotate so the capsule's Y axis points along the direction
+        //rotate so the capsule's Y axis points along the direction
         transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
 
-        // Stretch along Y (capsule height)
+        //stretch along Y (capsule height)
         float distance = direction.magnitude;
 
         Vector3 scale = transform.localScale;
